@@ -634,7 +634,7 @@ p{
 
     bottom:-10%;
 
-    left:48%;
+    left:44%;
 
     transform:translateX(-50%);
 
@@ -650,7 +650,7 @@ p{
 
 
 /* ======================================================
-   BARRA LEGAL INFERIOR
+   11. BARRA LEGAL
 ====================================================== */
 
 .barra-legal{
@@ -663,13 +663,11 @@ p{
 
     width:100%;
 
-    padding:10px 20px;
+    padding:12px 20px;
 
-    background:rgba(255,255,255,.75);
+    background:rgba(255,255,255,.92);
 
-    backdrop-filter:blur(8px);
-
-    -webkit-backdrop-filter:blur(8px);
+    border-top:1px solid rgba(0,0,0,.08);
 
     text-align:center;
 
@@ -677,9 +675,9 @@ p{
 
     font-size:9px;
 
-    letter-spacing:2px;
-
     font-weight:300;
+
+    letter-spacing:2px;
 
     color:var(--texto-secundario);
 
@@ -689,6 +687,8 @@ p{
 
 
 .barra-legal a{
+
+    color:var(--texto);
 
     transition:opacity var(--transicion);
 
