@@ -650,5 +650,58 @@ p{
 
 
 /* ======================================================
+   BARRA LEGAL INFERIOR
+====================================================== */
+
+.barra-legal{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:10px 20px;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(8px);
+
+    -webkit-backdrop-filter:blur(8px);
+
+    text-align:center;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:9px;
+
+    letter-spacing:2px;
+
+    font-weight:300;
+
+    color:var(--texto-secundario);
+
+    z-index:200;
+
+}
+
+
+.barra-legal a{
+
+    transition:opacity var(--transicion);
+
+}
+
+
+.barra-legal a:hover{
+
+    opacity:.60;
+
+}
+
+
+/* ======================================================
    9. RESPONSIVE MÓVIL
 ====================================================== */
