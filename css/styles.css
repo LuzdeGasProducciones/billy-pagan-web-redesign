@@ -151,7 +151,227 @@ em{
 
 
 /* ======================================================
-   2. TIPOGRAFÍAS Y ELEMENTOS GENERALES
+   4. TÍTULOS
+====================================================== */
+
+h1{
+
+    margin:0;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-weight:600;
+
+    line-height:.9;
+
+    letter-spacing:3px;
+
+    color:var(--texto);
+
+    text-shadow:var(--sombra-texto);
+
+}
+
+
+/* ======================================================
+   5. HERO
+====================================================== */
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background-image:url("../imagenes/inicio/fondo-web-index.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    animation:zoomFondo 20s ease-in-out infinite alternate;
+
+}
+
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:var(--capa);
+
+    z-index:1;
+
+}
+
+
+/* ======================================================
+   12. ANIMACIONES
+====================================================== */
+
+@keyframes zoomFondo{
+
+    from{
+
+        background-size:100%;
+
+    }
+
+    to{
+
+        background-size:112%;
+
+    }
+
+}
+
+
+@keyframes entradaTexto{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+        filter:blur(8px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+        filter:blur(0);
+
+    }
+
+}
+
+
+/* ======================================================
+   6. MENÚ ESCRITORIO
+====================================================== */
+
+.menu{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding-top:35px;
+
+    z-index:100;
+
+}
+
+
+.menu nav{
+
+    width:100%;
+
+}
+
+
+.menu ul{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:30px;
+
+}
+
+
+.menu li{
+
+    white-space:nowrap;
+
+}
+
+
+.menu a{
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:11px;
+
+    font-weight:300;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:var(--menu);
+
+    text-shadow:0 1px 8px rgba(255,255,255,.50);
+
+    transition:all var(--transicion);
+
+}
+
+
+.menu a:hover{
+
+    opacity:.65;
+
+    letter-spacing:4px;
+
+}
+
+
+/* ======================================================
+   7. BOTÓN HAMBURGUESA
+====================================================== */
+
+.hamburguesa{
+
+    display:none;
+
+    position:absolute;
+
+    top:22px;
+
+    right:22px;
+
+    z-index:1000;
+
+    color:var(--menu);
+
+    font-size:34px;
+
+    text-shadow:0 1px 8px rgba(255,255,255,.50);
+
+}
+
+
+/* ======================================================
+   8. TIPOGRAFÍAS Y ELEMENTOS GENERALES
 ====================================================== */
 
 
@@ -169,6 +389,176 @@ h3{
 p{
 
     line-height:1.8;
+
+}
+
+
+/* ======================================================
+   9. MENÚ MÓVIL
+====================================================== */
+
+.menu-movil{
+
+    display:none;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:fixed;
+
+    top:0;
+
+    right:-100%;
+
+    width:100%;
+
+    height:100vh;
+
+    background:rgba(255,255,255,.96);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    transition:right var(--transicion);
+
+    z-index:999;
+
+}
+
+
+.menu-movil.abierto{
+
+    right:0;
+
+}
+
+
+.menu-movil a{
+
+    margin:18px 0;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:18px;
+
+    font-weight:300;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    color:var(--menu);
+
+    transition:color var(--transicion),
+               letter-spacing var(--transicion);
+
+}
+
+
+.menu-movil a:hover{
+
+    letter-spacing:6px;
+
+    opacity:.70;
+
+}
+
+
+/* ======================================================
+   10. FOOTER
+====================================================== */
+
+.footer{
+
+    width:100%;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:9px;
+
+    font-weight:300;
+
+    letter-spacing:1px;
+
+    color:var(--texto-secundario);
+
+    z-index:100;
+
+}
+
+
+.footer p{
+
+    margin:6px 0;
+
+}
+
+
+.footer a{
+
+    transition:opacity var(--transicion);
+
+}
+
+
+.footer a:hover{
+
+    opacity:.65;
+
+}
+
+
+/* ======================================================
+   11. CONTENIDO PRINCIPAL
+====================================================== */
+
+.hero .contenido{
+
+    position:relative;
+
+    z-index:5;
+
+    margin-left:38%;
+
+    text-align:center;
+
+    opacity:0;
+
+    animation:entradaTexto 2s ease forwards;
+
+    animation-delay:1s;
+
+}
+
+
+.hero .contenido h1{
+
+    font-size:clamp(70px,10vw,130px);
+
+}
+
+
+.subtitulo{
+
+    margin-top:30px;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:14px;
+
+    font-weight:300;
+
+    letter-spacing:10px;
+
+    color:var(--texto);
 
 }
 
