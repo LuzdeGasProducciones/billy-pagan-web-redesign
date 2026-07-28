@@ -78,6 +78,40 @@ p{
    3. HERO / PORTADA
 ====================================================== */
 
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    background-image:url("../imagenes/inicio/fondo-web-index.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,255,255,0.12);
+
+    z-index:1;
+
+}
+
 
 /* ======================================================
    4. HEADER / MENÚ ESCRITORIO
@@ -93,10 +127,36 @@ p{
    6. CONTENIDO PRINCIPAL
 ====================================================== */
 
+.contenido{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
 
 /* ======================================================
    7. IMAGEN BILLY PAGÁN
 ====================================================== */
+
+.imagen-billy{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    height:85vh;
+
+    width:auto;
+
+    z-index:3;
+
+}
 
 
 /* ======================================================
