@@ -267,6 +267,24 @@ h1{
 }
 
 
+@keyframes movimientoBilly{
+
+    from{
+
+        transform:translateX(-50%) translateY(0);
+
+    }
+
+
+    to{
+
+        transform:translateX(-50%) translateY(-15px);
+
+    }
+
+}
+
+
 /* ======================================================
    13. MENÚ ESCRITORIO
 ====================================================== */
@@ -625,6 +643,8 @@ p{
     width:auto;
 
     z-index:3;
+
+    animation:movimientoBilly 12s ease-in-out infinite alternate;
 
 }
 
