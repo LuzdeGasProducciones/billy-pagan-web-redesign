@@ -607,7 +607,7 @@ p{
 
 
 /* ======================================================
-   7. IMAGEN BILLY PAGÁN
+   10. IMAGEN BILLY PAGÁN
 ====================================================== */
 
 .imagen-billy{
@@ -616,11 +616,11 @@ p{
 
     bottom:0;
 
-    left:50%;
+    left:20%;
 
     transform:translateX(-50%);
 
-    height:85vh;
+    height:95vh;
 
     width:auto;
 
