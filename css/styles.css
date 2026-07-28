@@ -650,7 +650,7 @@ p{
 
 
 /* ======================================================
-   11. BARRA LEGAL
+   12. BARRA LEGAL
 ====================================================== */
 
 .barra-legal{
@@ -690,7 +690,7 @@ p{
 
     color:var(--texto);
 
-    transition:opacity var(--transicion);
+    transition:.3s;
 
 }
 
