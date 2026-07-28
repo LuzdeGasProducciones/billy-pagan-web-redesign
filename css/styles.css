@@ -763,6 +763,92 @@ p{
     text-align:justify;
 
 }
+/* ======================================================
+   13. PÁGINAS INTERIORES
+====================================================== */
+
+.pagina{
+
+    position:relative;
+
+    min-height:100vh;
+
+    background-image:url("../imagenes/legal/fondo-legal-web.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    padding:170px 0 120px;
+
+}
+
+
+.pagina::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,255,255,.15);
+
+}
+
+
+.contenido-pagina{
+
+    position:relative;
+
+    z-index:5;
+
+    width:min(900px,90%);
+
+    margin:auto;
+
+}
+
+
+.contenido-pagina h1{
+
+    margin-bottom:60px;
+
+    text-align:center;
+
+    font-size:clamp(60px,8vw,100px);
+
+}
+
+
+.contenido-pagina h2{
+
+    margin-top:45px;
+
+    margin-bottom:18px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:34px;
+
+    font-weight:600;
+
+}
+
+
+.contenido-pagina p{
+
+    margin-bottom:22px;
+
+    font-size:15px;
+
+    line-height:2;
+
+    text-align:justify;
+
+}
 
 
 /* ======================================================
