@@ -8,10 +8,70 @@
    1. RESET GENERAL
 ====================================================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html,
+body{
+
+    width:100%;
+    min-height:100%;
+
+}
+
+
+body{
+
+    font-family:"Montserrat",sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
 
 /* ======================================================
    2. TIPOGRAFÍAS Y ELEMENTOS GENERALES
 ====================================================== */
+
+
+h1,
+h2,
+h3{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-weight:500;
+
+}
+
+
+p{
+
+    line-height:1.8;
+
+}
 
 
 /* ======================================================
