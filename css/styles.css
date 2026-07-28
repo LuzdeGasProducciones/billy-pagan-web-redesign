@@ -9,9 +9,13 @@
 ====================================================== */
 
 *{
+
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
+
 }
 
 
@@ -19,6 +23,7 @@ html,
 body{
 
     width:100%;
+
     min-height:100%;
 
 }
@@ -29,6 +34,10 @@ body{
     font-family:"Montserrat",sans-serif;
 
     overflow-x:hidden;
+
+    background:#ffffff;
+
+    color:#202020;
 
 }
 
@@ -44,13 +53,33 @@ a{
 
 img{
 
+    display:block;
+
     max-width:100%;
 
-    display:block;
+    height:auto;
 
 }
 
 
+ul{
+
+    list-style:none;
+
+}
+
+
+button{
+
+    border:none;
+
+    background:none;
+
+    font:inherit;
+
+    cursor:pointer;
+
+}
 /* ======================================================
    2. TIPOGRAFÍAS Y ELEMENTOS GENERALES
 ====================================================== */
