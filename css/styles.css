@@ -703,5 +703,68 @@ p{
 
 
 /* ======================================================
+   13. PÁGINA LEGAL
+====================================================== */
+
+.pagina-legal{
+
+    max-width:900px;
+
+    margin:180px auto 120px auto;
+
+    padding:0 40px;
+
+}
+
+
+.pagina-legal h1{
+
+    margin-bottom:60px;
+
+    text-align:center;
+
+    font-size:clamp(50px,6vw,80px);
+
+}
+
+
+.texto-legal{
+
+    font-size:15px;
+
+    line-height:2;
+
+    color:var(--texto);
+
+}
+
+
+.texto-legal h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:32px;
+
+    font-weight:600;
+
+    color:var(--texto);
+
+}
+
+
+.texto-legal p{
+
+    margin-bottom:25px;
+
+    text-align:justify;
+
+}
+
+
+/* ======================================================
    9. RESPONSIVE MÓVIL
 ====================================================== */
