@@ -267,18 +267,18 @@ h1{
 }
 
 
-@keyframes movimientoBilly{
+@keyframes zoomBilly{
 
     from{
 
-        transform:translateX(-50%) translateY(0);
+        transform:translateX(-50%) scale(1);
 
     }
 
 
     to{
 
-        transform:translateX(-50%) translateY(-15px);
+        transform:translateX(-50%) scale(1.06);
 
     }
 
@@ -632,19 +632,19 @@ p{
 
     position:absolute;
 
-    bottom:0;
+    bottom:-5%;
 
     left:38%;
 
     transform:translateX(-50%);
 
-    height:100vh;
+    height:95vh;
 
     width:auto;
 
     z-index:3;
 
-    animation:movimientoBilly 12s ease-in-out infinite alternate;
+    animation:zoomBilly 15s ease-in-out infinite alternate;
 
 }
 
