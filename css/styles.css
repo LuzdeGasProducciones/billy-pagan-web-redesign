@@ -80,6 +80,48 @@ button{
     cursor:pointer;
 
 }
+
+
+/* ======================================================
+   2. VARIABLES
+====================================================== */
+
+:root{
+
+    /* COLORES */
+
+    --texto:#202020;
+
+    --texto-secundario:#666666;
+
+    --menu:#242424;
+
+    --blanco:#ffffff;
+
+    --negro:#000000;
+
+
+    /* TRANSPARENCIAS */
+
+    --capa:rgba(255,255,255,.15);
+
+    --caja:rgba(255,255,255,.28);
+
+
+    /* SOMBRAS */
+
+    --sombra-texto:0 4px 25px rgba(255,255,255,.80);
+
+    --sombra-caja:0 10px 30px rgba(0,0,0,.10);
+
+
+    /* TRANSICIONES */
+
+    --transicion:.30s ease;
+
+}
+
+
 /* ======================================================
    2. TIPOGRAFÍAS Y ELEMENTOS GENERALES
 ====================================================== */
