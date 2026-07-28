@@ -267,7 +267,7 @@ h1{
 }
 
 
-@keyframes zoomBilly{
+@keyframes movimientoBilly{
 
     from{
 
@@ -278,7 +278,7 @@ h1{
 
     to{
 
-        transform:translateX(-50%) scale(1.06);
+        transform:translateX(-50%) scale(1.02);
 
     }
 
@@ -644,7 +644,7 @@ p{
 
     z-index:3;
 
-    animation:zoomBilly 15s ease-in-out infinite alternate;
+    animation:movimientoBilly 20s ease-in-out infinite alternate;
 
 }
 
