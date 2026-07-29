@@ -709,7 +709,6 @@ em{
     z-index:100;
 
 }
-
 /* ======================================================
    23. BARRA INFERIOR
 ====================================================== */
@@ -718,19 +717,33 @@ em{
 
     position:fixed;
 
-    bottom:0;
-
     left:0;
+
+    bottom:0;
 
     width:100%;
 
-    padding:12px 20px;
+    height:52px;
 
-    background:rgba(255,255,255,.92);
+    display:flex;
 
-    border-top:1px solid rgba(0,0,0,.08);
+    justify-content:center;
 
-    text-align:center;
+    align-items:center;
+
+    padding:0 40px;
+
+    background:linear-gradient(
+        to top,
+        rgba(255,255,255,.12),
+        rgba(255,255,255,0)
+    );
+
+    backdrop-filter:blur(6px);
+
+    -webkit-backdrop-filter:blur(6px);
+
+    border-top:1px solid rgba(255,255,255,.18);
 
     font-family:"Montserrat",sans-serif;
 
@@ -738,28 +751,47 @@ em{
 
     font-weight:300;
 
-    letter-spacing:2px;
+    letter-spacing:1.8px;
 
-    color:var(--texto-secundario);
+    line-height:1;
 
-    z-index:200;
+    text-transform:uppercase;
+
+    color:rgba(255,255,255,.88);
+
+    z-index:999;
 
 }
+
+
+/* ==========================================
+   TEXTO
+========================================== */
 
 .barra-inferior p{
 
     margin:0;
 
+    padding:0;
+
+    white-space:nowrap;
+
 }
 
 
+/* ==========================================
+   ENLACES
+========================================== */
+
 .barra-inferior a{
 
-    color:var(--texto);
+    color:inherit;
 
     text-decoration:none;
 
-    transition:opacity .30s ease;
+    transition:
+        opacity .35s ease,
+        color .35s ease;
 
 }
 
