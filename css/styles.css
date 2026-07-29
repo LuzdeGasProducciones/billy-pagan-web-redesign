@@ -487,35 +487,6 @@ p{
 
 
 /* ======================================================
-   11. FOOTER
-====================================================== */
-
-.footer{
-
-    position:fixed;
-
-    left:0;
-
-    bottom:35px;
-
-    width:100%;
-
-    text-align:center;
-
-    font-size:9px;
-
-    font-weight:300;
-
-    letter-spacing:1px;
-
-    color:var(--texto-secundario);
-
-    z-index:100;
-
-}
-
-
-/* ======================================================
    18. CONTENIDO PRINCIPAL
 ====================================================== */
 
@@ -645,6 +616,35 @@ p{
     z-index:3;
 
     animation:movimientoBilly 20s ease-in-out infinite alternate;
+
+}
+
+
+/* ======================================================
+   11. FOOTER
+====================================================== */
+
+.footer{
+
+    position:fixed;
+
+    left:0;
+
+    bottom:35px;
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:9px;
+
+    font-weight:300;
+
+    letter-spacing:1px;
+
+    color:var(--texto-secundario);
+
+    z-index:100;
 
 }
 
