@@ -633,7 +633,7 @@ em{
 
     -webkit-user-drag:none;
 
-    pointer-events:auto;
+    pointer-events:none;
 
     will-change:transform;
 
@@ -808,7 +808,7 @@ em{
 
     justify-content:center;
 
-    gap:18px;
+    gap:26px;
 
     margin:0;
 
@@ -820,7 +820,7 @@ em{
 
     letter-spacing:2px;
 
-    color:#5b5b5b;
+    color:#4a4a4a;
 
 }
 
@@ -830,7 +830,7 @@ em{
 
     text-decoration:none;
 
-    transition:none !important;
+    transition:none;
 
 }
 
