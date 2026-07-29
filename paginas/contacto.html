@@ -1,1 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+    <!-- ==========================================
+         CONFIGURACIÓN GENERAL
+    ========================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto | Billy Pagán</title>
+
+    <!-- ==========================================
+         TIPOGRAFÍAS
+    ========================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+
+    <!-- ==========================================
+         CSS
+    ========================================== -->
+
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+
+<body>
+
+
+<!-- ==================================================
+     CABECERA / MENÚ
+================================================== -->
+
+<header class="menu">
+
+    <nav>
+
+        <ul>
+
+            <li><a href="../index.html">INICIO</a></li>
+            <li><a href="biografia.html">BIOGRAFÍA</a></li>
+            <li><a href="musica.html">MÚSICA</a></li>
+            <li><a href="videos.html">VÍDEOS</a></li>
+            <li><a href="conciertos.html">CONCIERTOS</a></li>
+            <li><a href="galeria.html">GALERÍA</a></li>
+            <li><a href="https://payhip.com/LuzdeGasRecords" target="_blank">TIENDA</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- ==================================================
+     MENÚ MÓVIL
+================================================== -->
+
+<button class="hamburguesa" id="hamburguesa">
+
+    ☰
+
+</button>
+
+
+<nav class="menu-movil" id="menuMovil">
+
+    <a href="../index.html">INICIO</a>
+    <a href="biografia.html">BIOGRAFÍA</a>
+    <a href="musica.html">MÚSICA</a>
+    <a href="videos.html">VÍDEOS</a>
+    <a href="conciertos.html">CONCIERTOS</a>
+    <a href="galeria.html">GALERÍA</a>
+    <a href="https://payhip.com/LuzdeGasRecords" target="_blank">TIENDA</a>
+    <a href="contacto.html">CONTACTO</a>
+
+</nav>
+
+
+<!-- ==================================================
+     CONTENIDO
+================================================== -->
+
+<section class="pagina">
+
+    <main class="contenido-pagina">
+
+        <h1>Contacto</h1>
+
+        <p>
+            EN CONSTRUCCIÓN
+        </p>
+
+        <!-- Formulario básico (usa mailto para abrir el cliente de correo)
+             Se incluye como funcionalidad provisional hasta que haya backend. -->
+        <form action="mailto:luzdegasproducciones@gmail.com" method="post" enctype="text/plain" style="margin-top:30px;">
+            <label style="display:block; margin-bottom:8px;">Nombre<br>
+                <input type="text" name="Nombre" style="width:100%; padding:8px; box-sizing:border-box;">
+            </label>
+
+            <label style="display:block; margin-bottom:8px;">Email<br>
+                <input type="email" name="Email" style="width:100%; padding:8px; box-sizing:border-box;">
+            </label>
+
+            <label style="display:block; margin-bottom:8px;">Mensaje<br>
+                <textarea name="Mensaje" rows="6" style="width:100%; padding:8px; box-sizing:border-box;"></textarea>
+            </label>
+
+            <p style="text-align:center; margin-top:12px;">
+                <button type="submit" style="padding:10px 18px; background:var(--menu); color:#fff; border-radius:2px; text-transform:uppercase; letter-spacing:2px;">Enviar</button>
+            </p>
+        </form>
+
+    </main>
+
+</section>
+
+
+<!-- ==================================================
+     BARRA INFERIOR
+================================================== -->
+
+<footer class="barra-inferior">
+
+    <p>
+
+        © 2026
+
+        <a href="../index.html">
+            BILLY PAGÁN · SITIO OFICIAL
+        </a>
+
+        · TODOS LOS DERECHOS RESERVADOS ·
+
+        <a href="terminos-condiciones.html">
+            TÉRMINOS Y CONDICIONES
+        </a>
+
+    </p>
+
+</footer>
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script src="../js/script.js"></script>
+
+</body>
+
+</html>
