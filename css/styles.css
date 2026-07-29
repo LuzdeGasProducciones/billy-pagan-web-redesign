@@ -773,8 +773,10 @@ em{
 
 }
 
+/* ======================================================
+   BARRA INFERIOR
+====================================================== */
 
-/* Barra inferior: estilo igual al menú superior */
 .barra-inferior{
 
     position:fixed;
@@ -827,21 +829,21 @@ em{
 
     text-decoration:none;
 
-}
-
-
-
-.barra-inferior a:hover{
-
-    color:#202020;
+    transition:none;
 
 }
 
 .barra-inferior a:hover{
 
-    opacity:.8;
+    color:#5b5b5b;
 
-    letter-spacing:3.6px;
+    text-decoration:none;
+
+    opacity:1;
+
+    letter-spacing:inherit;
+
+    cursor:pointer;
 
 }
 
