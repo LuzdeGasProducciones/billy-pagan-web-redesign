@@ -720,11 +720,20 @@ em{
 }
 
 
+.barra-inferior p{
+
+    margin:0;
+
+}
+
+
 .barra-inferior a{
 
     color:var(--texto);
 
-    transition:.3s;
+    text-decoration:none;
+
+    transition:opacity .30s ease;
 
 }
 
