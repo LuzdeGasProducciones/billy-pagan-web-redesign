@@ -10,7 +10,9 @@
 
 :root{
 
-    /* COLORES */
+    /* ==========================================
+       COLORES
+    ========================================== */
 
     --texto:#202020;
 
@@ -23,21 +25,40 @@
     --negro:#000000;
 
 
-    /* TRANSPARENCIAS */
+    /* ==========================================
+       TRANSPARENCIAS
+    ========================================== */
 
     --capa:rgba(255,255,255,.15);
 
     --caja:rgba(255,255,255,.28);
 
+    --cristal:rgba(255,255,255,.35);
 
-    /* SOMBRAS */
+    --cristal-hover:rgba(255,255,255,.45);
+
+
+    /* ==========================================
+       BORDES
+    ========================================== */
+
+    --borde-claro:rgba(255,255,255,.18);
+
+    --borde-oscuro:rgba(0,0,0,.08);
+
+
+    /* ==========================================
+       SOMBRAS
+    ========================================== */
 
     --sombra-texto:0 4px 25px rgba(255,255,255,.80);
 
     --sombra-caja:0 10px 30px rgba(0,0,0,.10);
 
 
-    /* TRANSICIONES */
+    /* ==========================================
+       TRANSICIONES
+    ========================================== */
 
     --transicion:.30s ease;
 
@@ -58,25 +79,38 @@
 }
 
 
-html,
-body{
+html{
 
     width:100%;
 
-    min-height:100%;
+    height:100%;
+
+    margin:0;
+
+    padding:0;
+
+    overflow-x:hidden;
 
 }
 
 
 body{
 
-    font-family:"Montserrat",sans-serif;
+    width:100%;
+
+    min-height:100vh;
+
+    margin:0;
+
+    padding:0;
 
     overflow-x:hidden;
 
-    background:#ffffff;
+    font-family:"Montserrat",sans-serif;
 
-    color:#202020;
+    background:var(--blanco);
+
+    color:var(--texto);
 
 }
 
@@ -206,42 +240,25 @@ em{
 @keyframes zoomFondo{
 
     from{
-
         background-size:100%;
-
     }
-
     to{
-
         background-size:112%;
-
     }
-
 }
-
 
 @keyframes entradaTexto{
 
     from{
-
         opacity:0;
-
         transform:translateY(50px);
-
         filter:blur(8px);
-
     }
-
     to{
-
         opacity:1;
-
         transform:translateY(0);
-
         filter:blur(0);
-
     }
-
 }
 
 
@@ -254,16 +271,18 @@ em{
 
     from{
 
-        transform:translateX(-50%);
+        transform:
+        translateX(-50%)
+        scale(1);
 
     }
-
     to{
 
-        transform:translateX(-50%);
+        transform:
+        translateX(calc(-50% + 8px))
+        scale(1.015);
 
     }
-
 }
 
 /* ======================================================
@@ -636,11 +655,11 @@ em{
 
     position:absolute;
 
-    left:43%;
+    left:44%;
 
     bottom:0;
 
-    height:95vh;
+    height:105vh;
 
     width:auto;
 
@@ -658,12 +677,9 @@ em{
 
     will-change:transform;
 
-    animation:movimientoBilly 24s ease-in-out infinite alternate;
-
-    transition:transform .45s cubic-bezier(.22,.61,.36,1);
+    animation:movimientoBilly 18s ease-in-out infinite alternate;
 
 }
-
 /* ======================================================
    13. PÁGINAS INTERIORES
 ====================================================== */
