@@ -245,18 +245,22 @@ em{
 }
 
 
+/* ======================================================
+   MOVIMIENTO BILLY PAGÁN
+   (Reservado para futuras animaciones)
+====================================================== */
+
 @keyframes movimientoBilly{
 
     from{
 
-        transform:translateX(-50%) scale(1);
+        transform:translateX(-50%);
 
     }
 
-
     to{
 
-        transform:translateX(-50%) scale(1.02);
+        transform:translateX(-50%);
 
     }
 
@@ -457,7 +461,7 @@ em{
 
     width:100%;
 
-    min-height:100vh;
+    height:100vh;
 
     display:flex;
 
@@ -497,6 +501,10 @@ em{
 
 .hero .contenido{
 
+    position:relative;
+
+    z-index:5;
+
     margin-left:38%;
 
     opacity:0;
@@ -535,57 +543,27 @@ em{
    12. IMAGEN BILLY PAGÁN
 ====================================================== */
 
-.imagen-billy {
+.imagen-billy{
 
-    /* aquí ya tendrás tus propiedades actuales */
     position:absolute;
-    /* tamaño */
-    /* posición */
-    /* etc. */
 
+    bottom:-10%;
 
-    /* NUEVO */
-    transition: transform 0.35s ease;
-    transform-origin:center center;
+    left:44%;
 
-}
+    transform:translateX(-50%);
 
+    height:110vh;
 
-.imagen-billy:hover {
+    width:auto;
 
-    animation:vibracionBilly 0.45s ease-in-out;
+    z-index:3;
 
-}
+    animation:movimientoBilly 20s ease-in-out infinite alternate;
 
-
-@keyframes vibracionBilly {
-
-    0% {
-        transform:translateX(0) rotate(0deg);
-    }
-
-    20% {
-        transform:translateX(-3px) rotate(-0.5deg);
-    }
-
-    40% {
-        transform:translateX(3px) rotate(0.5deg);
-    }
-
-    60% {
-        transform:translateX(-2px) rotate(-0.3deg);
-    }
-
-    80% {
-        transform:translateX(2px) rotate(0.3deg);
-    }
-
-    100% {
-        transform:translateX(0) rotate(0deg);
-    }
+    will-change:transform;
 
 }
-
 
 /* ======================================================
    13. PÁGINAS INTERIORES
