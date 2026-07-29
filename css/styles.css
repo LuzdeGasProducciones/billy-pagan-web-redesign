@@ -535,29 +535,57 @@ em{
    12. IMAGEN BILLY PAGÁN
 ====================================================== */
 
-.imagen-billy{
+.imagen-billy {
 
+    /* aquí ya tendrás tus propiedades actuales */
     position:absolute;
+    /* tamaño */
+    /* posición */
+    /* etc. */
 
-    bottom:-10%;
 
-    left:44%;
-
-    transform:translateX(-50%);
-
-    height:110vh;
-
-    width:auto;
-
-    z-index:3;
-
-    animation:movimientoBilly 20s ease-in-out infinite alternate;
-
-    transition:
-        left .8s cubic-bezier(.22,.61,.36,1),
-        transform .8s cubic-bezier(.22,.61,.36,1);
+    /* NUEVO */
+    transition: transform 0.35s ease;
+    transform-origin:center center;
 
 }
+
+
+.imagen-billy:hover {
+
+    animation:vibracionBilly 0.45s ease-in-out;
+
+}
+
+
+@keyframes vibracionBilly {
+
+    0% {
+        transform:translateX(0) rotate(0deg);
+    }
+
+    20% {
+        transform:translateX(-3px) rotate(-0.5deg);
+    }
+
+    40% {
+        transform:translateX(3px) rotate(0.5deg);
+    }
+
+    60% {
+        transform:translateX(-2px) rotate(-0.3deg);
+    }
+
+    80% {
+        transform:translateX(2px) rotate(0.3deg);
+    }
+
+    100% {
+        transform:translateX(0) rotate(0deg);
+    }
+
+}
+
 
 /* ======================================================
    13. PÁGINAS INTERIORES
@@ -709,60 +737,7 @@ em{
     z-index:100;
 
 }
-/* ======================================================
-   12. IMAGEN BILLY PAGÁN
-====================================================== */
 
-.imagen-billy {
-
-    /* aquí ya tendrás tus propiedades actuales */
-    position:absolute;
-    /* tamaño */
-    /* posición */
-    /* etc. */
-
-
-    /* NUEVO */
-    transition: transform 0.35s ease;
-    transform-origin:center center;
-
-}
-
-
-.imagen-billy:hover {
-
-    animation:vibracionBilly 0.45s ease-in-out;
-
-}
-
-
-@keyframes vibracionBilly {
-
-    0% {
-        transform:translateX(0) rotate(0deg);
-    }
-
-    20% {
-        transform:translateX(-3px) rotate(-0.5deg);
-    }
-
-    40% {
-        transform:translateX(3px) rotate(0.5deg);
-    }
-
-    60% {
-        transform:translateX(-2px) rotate(-0.3deg);
-    }
-
-    80% {
-        transform:translateX(2px) rotate(0.3deg);
-    }
-
-    100% {
-        transform:translateX(0) rotate(0deg);
-    }
-
-}
 
 
 /* ======================================================
