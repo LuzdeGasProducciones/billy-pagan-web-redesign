@@ -3,65 +3,49 @@
    styles.css
 ====================================================== */
 
-
 /* ======================================================
    1. VARIABLES
 ====================================================== */
 
 :root{
-
     /* ==========================================
        COLORES
     ========================================== */
 
     --texto:#202020;
-
     --texto-secundario:#666666;
-
     --menu:#242424;
-
     --blanco:#ffffff;
-
     --negro:#000000;
-
 
     /* ==========================================
        TRANSPARENCIAS
     ========================================== */
 
     --capa:rgba(255,255,255,.15);
-
     --caja:rgba(255,255,255,.28);
-
     --cristal:rgba(255,255,255,.35);
-
     --cristal-hover:rgba(255,255,255,.45);
-
 
     /* ==========================================
        BORDES
     ========================================== */
 
     --borde-claro:rgba(255,255,255,.18);
-
     --borde-oscuro:rgba(0,0,0,.08);
-
 
     /* ==========================================
        SOMBRAS
     ========================================== */
 
     --sombra-texto:0 4px 25px rgba(255,255,255,.80);
-
     --sombra-caja:0 10px 30px rgba(0,0,0,.10);
-
 
     /* ==========================================
        TRANSICIONES
     ========================================== */
 
     --transicion:.30s ease;
-
 }
 
 /* ======================================================
@@ -69,89 +53,50 @@
 ====================================================== */
 
 *{
-
     margin:0;
-
     padding:0;
-
     box-sizing:border-box;
-
 }
-
 
 html{
-
     width:100%;
-
     height:100%;
-
     margin:0;
-
     padding:0;
-
     overflow-x:hidden;
-
 }
-
 
 body{
-
     width:100%;
-
     min-height:100vh;
-
     margin:0;
-
     padding:0;
-
     overflow-x:hidden;
-
     font-family:"Montserrat",sans-serif;
-
     background:var(--blanco);
-
     color:var(--texto);
-
 }
-
 
 a{
-
     text-decoration:none;
-
     color:inherit;
-
 }
-
 
 img{
-
     display:block;
-
     max-width:100%;
-
     height:auto;
-
 }
-
 
 ul{
-
     list-style:none;
-
 }
 
-
 button{
-
     border:none;
-
     background:none;
-
     font:inherit;
-
     cursor:pointer;
-
 }
 
 /* ======================================================
@@ -160,25 +105,16 @@ button{
 
 html,
 body{
-
     scroll-behavior:smooth;
-
 }
-
 
 body{
-
     color:var(--texto);
-
     background:var(--blanco);
-
 }
 
-
 em{
-
     font-style:italic;
-
 }
 
 /* ======================================================
@@ -186,37 +122,22 @@ em{
 ====================================================== */
 
 h1{
-
     margin:0;
-
     font-family:"Cormorant Garamond",serif;
-
     font-weight:600;
-
     line-height:.9;
-
     letter-spacing:3px;
-
     color:var(--texto);
-
     text-shadow:var(--sombra-texto);
-
 }
-
 
 a{
-
     color:inherit;
-
     text-decoration:none;
-
 }
 
-
 em{
-
     font-style:italic;
-
 }
 
 /* ======================================================
@@ -224,13 +145,9 @@ em{
 ====================================================== */
 
 .contenido{
-
     position:relative;
-
     z-index:5;
-
     text-align:center;
-
 }
 
 /* ======================================================
@@ -238,7 +155,6 @@ em{
 ====================================================== */
 
 @keyframes zoomFondo{
-
     from{
         background-size:100%;
     }
@@ -248,12 +164,12 @@ em{
 }
 
 @keyframes entradaTexto{
-
     from{
         opacity:0;
         transform:translateY(50px);
         filter:blur(8px);
     }
+   
     to{
         opacity:1;
         transform:translateY(0);
@@ -261,27 +177,22 @@ em{
     }
 }
 
-
 /* ======================================================
    MOVIMIENTO BILLY PAGÁN
    (Reservado para futuras animaciones)
 ====================================================== */
 
 @keyframes movimientoBilly{
-
     from{
-
         transform:
         translateX(-50%)
         scale(1);
-
     }
+   
     to{
-
         transform:
         translateX(calc(-50% + 8px))
         scale(1.015);
-
     }
 }
 
@@ -294,25 +205,15 @@ em{
 ====================================================== */
 
 .menu{
-
     position:fixed;
-
     top:0;
-
     left:0;
-
     width:100%;
-
     padding:32px 0;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     z-index:1000;
-
     background:linear-gradient(
         to bottom,
         rgba(255,255,255,.38),
@@ -320,112 +221,65 @@ em{
     );
 
     backdrop-filter:blur(10px);
-
     -webkit-backdrop-filter:blur(10px);
-
 }
-
 
 .menu nav{
-
     width:100%;
-
 }
-
 
 .menu ul{
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     gap:44px;
-
     margin:0;
-
     padding:0;
-
     list-style:none;
-
 }
-
 
 .menu li{
-
     white-space:nowrap;
-
 }
 
-
 .menu a{
-
     position:relative;
-
     display:block;
-
     padding:4px 0;
-
     font-family:"Montserrat",sans-serif;
-
     font-size:11px;
-
     font-weight:400;
-
     letter-spacing:3.2px;
-
     text-transform:uppercase;
-
     color:rgba(35,35,35,.90);
-
     text-decoration:none;
-
     transition:
         color .35s ease,
         opacity .35s ease;
-
 }
-
 
 /* ==========================================
    LÍNEA INFERIOR
 ========================================== */
 
 .menu a::after{
-
     content:"";
-
     position:absolute;
-
     left:50%;
-
     bottom:-6px;
-
     width:0;
-
     height:1px;
-
     background:rgba(35,35,35,.75);
-
     transform:translateX(-50%);
-
     transition:width .35s ease;
-
 }
-
 
 .menu a:hover{
-
     color:#000;
-
 }
 
-
 .menu a:hover::after{
-
     width:100%;
-
 }
 
 /* ======================================================
@@ -433,23 +287,14 @@ em{
 ====================================================== */
 
 .hamburguesa{
-
     display:none;
-
     position:absolute;
-
     top:22px;
-
     right:22px;
-
     z-index:1000;
-
     color:var(--menu);
-
     font-size:34px;
-
     text-shadow:0 1px 8px rgba(255,255,255,.50);
-
 }
 
 /* ======================================================
@@ -457,73 +302,41 @@ em{
 ====================================================== */
 
 .menu-movil{
-
     display:none;
-
     flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
-
     position:fixed;
-
     top:0;
-
     right:-100%;
-
     width:100%;
-
     height:100vh;
-
     background:rgba(255,255,255,.96);
-
     backdrop-filter:blur(12px);
-
     -webkit-backdrop-filter:blur(12px);
-
     transition:right var(--transicion);
-
     z-index:999;
-
 }
-
 
 .menu-movil.abierto{
-
     right:0;
-
 }
-
 
 .menu-movil a{
-
     margin:18px 0;
-
     font-family:"Montserrat",sans-serif;
-
     font-size:18px;
-
     font-weight:300;
-
     letter-spacing:5px;
-
     text-transform:uppercase;
-
     color:var(--menu);
-
     transition:color var(--transicion),
                letter-spacing var(--transicion);
-
 }
 
-
 .menu-movil a:hover{
-
     letter-spacing:6px;
-
     opacity:.70;
-
 }
 
 /* ======================================================
@@ -531,98 +344,59 @@ em{
 ====================================================== */
 
 .hero{
-
     position:relative;
-
     width:100%;
-
     height:100vh;
-
     min-height:100vh;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     overflow:hidden;
-
     isolation:isolate;
-
     background-image:url("../imagenes/inicio/fondo-web-vacio.jpg");
-
     background-position:center center;
-
     background-repeat:no-repeat;
-
     background-size:cover;
-
     animation:zoomFondo 24s ease-in-out infinite alternate;
-
 }
-
 
 /* ==========================================
    CAPA SUPERIOR
 ========================================== */
 
 .hero::before{
-
     content:"";
-
     position:absolute;
-
     inset:0;
-
     background:var(--capa);
-
     z-index:1;
-
 }
-
 
 /* ==========================================
    CONTENIDO
 ========================================== */
 
 .hero .contenido{
-
     position:relative;
-
     z-index:10;
-
     width:40%;
-
     margin-left:40%;
-
     margin-top:-20px;
-
     opacity:0;
-
     animation:entradaTexto 2s ease forwards;
-
     animation-delay:1s;
-
 }
-
 
 /* ==========================================
    TÍTULO
 ========================================== */
 
 .hero .contenido h1{
-
     margin:0;
-
     font-size:clamp(76px,9vw,140px);
-
     font-weight:500;
-
     line-height:.92;
-
     letter-spacing:-1px;
-
 }
 
 /* ==========================================
@@ -630,21 +404,13 @@ em{
 ========================================== */
 
 .subtitulo{
-
     margin-top:26px;
-
     font-family:"Montserrat",sans-serif;
-
     font-size:13px;
-
     font-weight:300;
-
     letter-spacing:11px;
-
     text-transform:uppercase;
-
     color:var(--texto);
-
 }
 
 /* ======================================================
@@ -652,123 +418,70 @@ em{
 ====================================================== */
 
 .imagen-billy{
-
     position:absolute;
-
     left:39%;
-
     bottom:0;
-
     height:95vh;
-
     width:auto;
-
     transform:translateX(-50%);
-
     transform-origin:center bottom;
-
     z-index:5;
-
     user-select:none;
-
     -webkit-user-drag:none;
-
     pointer-events:auto;
-
     will-change:transform;
-
     animation:movimientoBilly 18s ease-in-out infinite alternate;
-
 }
+
 /* ======================================================
    13. PÁGINAS INTERIORES
 ====================================================== */
 
 .pagina{
-
     position:relative;
-
     min-height:100vh;
-
     padding:170px 0 120px;
-
     background-image:url("../imagenes/legal/fondo-legal-web.jpg");
-
     background-position:center;
-
     background-repeat:no-repeat;
-
     background-size:cover;
-
 }
-
 
 .pagina::before{
-
     content:"";
-
     position:absolute;
-
     inset:0;
-
     background:rgba(255,255,255,.15);
-
 }
-
 
 .contenido-pagina{
-
     position:relative;
-
     z-index:5;
-
     width:min(900px,90%);
-
     margin:0 auto;
-
 }
-
 
 .contenido-pagina h1{
-
     margin-bottom:60px;
-
     text-align:center;
-
     font-size:clamp(50px,6vw,80px);
-
 }
-
 
 .contenido-pagina h2{
-
     margin-top:40px;
-
     margin-bottom:15px;
-
     font-family:"Cormorant Garamond",serif;
-
     font-size:32px;
-
     font-weight:600;
-
     color:var(--texto);
-
 }
 
-
 .contenido-pagina p{
-
     margin-bottom:25px;
-
     font-size:15px;
-
     line-height:2;
-
     text-align:justify;
-
     color:var(--texto);
-
 }
 
 /* ======================================================
@@ -807,183 +520,104 @@ em{
    22. TERMINOS Y CONDICIONES
 ====================================================== */
 
-
 .pagina-legal{
-
     min-height:100vh;
-
     background-image:url("../imagenes/legal/fondo-web-vacio.jpg");
-
     background-size:cover;
-
     background-position:center;
-
     background-attachment:fixed;
-
 }
-
-
 
 /* ======================================================
    CONTENIDO LEGAL
 ====================================================== */
 
-
 .contenido-legal{
-
     min-height:100vh;
-
     padding-top:150px;
-
     padding-bottom:130px;
-
 }
-
-
 
 /* CAJA PRINCIPAL */
 
 .contenido-legal .contenido-pagina{
-
     width:70%;
-
     max-width:900px;
-
     margin:0 auto;
-
     padding:50px;
-
     background:rgba(255,255,255,.15);
-
 }
-
-
 
 /* ======================================================
    TITULO PRINCIPAL
 ====================================================== */
 
-
 .contenido-legal .contenido-pagina h1{
-
     font-family:'Cormorant Garamond', serif;
-
     font-size:clamp(55px,7vw,90px);
-
     font-weight:500;
-
     text-align:center;
-
     margin:0 0 60px 0;
-
     color:var(--texto);
-
 }
-
-
 
 /* ======================================================
    TITULOS DE SECCIONES
 ====================================================== */
 
-
 .contenido-legal .contenido-pagina h2{
-
     font-family:'Cormorant Garamond', serif;
-
     font-size:32px;
-
     font-weight:500;
-
     margin-top:45px;
-
     margin-bottom:15px;
-
     color:var(--texto);
-
 }
-
-
 
 /* ======================================================
    TEXTO
 ====================================================== */
 
-
 .contenido-legal .contenido-pagina p{
-
     font-family:'Montserrat', sans-serif;
-
     font-size:15px;
-
     font-weight:300;
-
     line-height:2;
-
     color:var(--texto);
-
 }
-
-
 
 /* ======================================================
    MOVIL
 ====================================================== */
 
-
 @media(max-width:768px){
 
-
     .contenido-legal{
-
         padding-top:120px;
-
         padding-bottom:100px;
-
     }
-
-
 
     .contenido-legal .contenido-pagina{
-
         width:88%;
-
         padding:30px 25px;
-
     }
-
-
-
+   
     .contenido-legal .contenido-pagina h1{
-
         font-size:48px;
-
         margin-bottom:40px;
-
     }
-
-
 
     .contenido-legal .contenido-pagina h2{
-
         font-size:26px;
-
         margin-top:35px;
-
     }
-
-
 
     .contenido-legal .contenido-pagina p{
-
         font-size:14px;
-
         line-height:1.9;
-
     }
-
-
 }
+
 /* ======================================================
    23. FOOTER / PIE DE PÁGINA
 ====================================================== */
@@ -1008,7 +642,6 @@ em{
     border-top:1px solid rgba(255,255,255,.08);
 
     z-index:200;
-
 }
 
 .barra-inferior p{
@@ -1020,7 +653,6 @@ em{
     text-transform:uppercase;
     color:rgba(255,255,255,.88);
     white-space:nowrap;
-
 }
 
 .barra-inferior a{
