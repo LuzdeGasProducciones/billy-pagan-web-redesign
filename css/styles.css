@@ -802,12 +802,106 @@ em{
 /* ======================================================
    21. CONTACTO
 ====================================================== */
+
 /* ======================================================
-   22. FOOTER / PIE DE PÁGINA
+   22. TERMINOS Y CONDICIONES
+====================================================== */
+
+.pagina-legal{
+    min-height:100vh;
+    background-image:url("../imagenes/fondo-web-vacio.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+/* CONTENIDO LEGAL */
+
+.contenido-legal{
+    min-height:100vh;
+    padding-top:160px;
+    padding-bottom:130px;
+}
+
+/* CAJA PRINCIPAL */
+
+.contenido-pagina{
+    width:70%;
+    max-width:900px;
+    margin:0 auto;
+    padding:50px;
+    background:rgba(255,255,255,.15);
+}
+
+/* TITULO PRINCIPAL */
+
+.contenido-pagina h1{
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(55px,7vw,90px);
+    font-weight:500;
+    text-align:center;
+    margin:0 0 60px 0;
+    color:var(--texto);
+}
+
+/* TITULOS DE APARTADOS */
+
+.contenido-pagina h2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:32px;
+    font-weight:500;
+    margin-top:45px;
+    margin-bottom:15px;
+    color:var(--texto);
+}
+
+/* TEXTO */
+
+.contenido-pagina p{
+    font-family:'Montserrat', sans-serif;
+    font-size:15px;
+    font-weight:300;
+    line-height:2;
+    color:var(--texto);
+}
+
+/* ======================================================
+   ADAPTACIÓN MÓVIL
+====================================================== */
+
+@media(max-width:768px){
+
+    .contenido-legal{
+        padding-top:120px;
+        padding-bottom:100px;
+    }
+
+    .contenido-pagina{
+        width:88%;
+        padding:30px 25px;
+    }
+
+    .contenido-pagina h1{
+        font-size:48px;
+        margin-bottom:40px;
+    }
+
+    .contenido-pagina h2{
+        font-size:26px;
+        margin-top:35px;
+    }
+
+    .contenido-pagina p{
+        font-size:14px;
+        line-height:1.9;
+    }
+}
+
+/* ======================================================
+   23. FOOTER / PIE DE PÁGINA
 ====================================================== */
 
 .barra-inferior{
-
     position:fixed;
     left:0;
     bottom:0;
@@ -831,7 +925,6 @@ em{
 }
 
 .barra-inferior p{
-
     margin:0;
     font-family:"Montserrat",sans-serif;
     font-size:11px;
@@ -844,19 +937,13 @@ em{
 }
 
 .barra-inferior a{
-
     color:inherit;
-
     text-decoration:none;
-
     transition:opacity .35s ease;
-
 }
 
 .barra-inferior a:hover{
-
     opacity:.65;
-
 }
 
 /* ======================================================
