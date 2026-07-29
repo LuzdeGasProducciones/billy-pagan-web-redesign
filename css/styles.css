@@ -329,6 +329,8 @@ em{
 
 .menu a{
 
+    position:relative;
+
     display:block;
 
     padding:8px 0;
@@ -337,20 +339,16 @@ em{
 
     font-size:11px;
 
-    font-weight:400;
+    font-weight:300;
 
     letter-spacing:3.5px;
 
     text-transform:uppercase;
 
-    color:#ffffff;
-
-    text-shadow:
-        0 2px 8px rgba(0,0,0,.70),
-        0 0 20px rgba(0,0,0,.35);
+    color:#242424;
 
     transition:
-        opacity .35s ease,
+        color .30s ease,
         letter-spacing .35s ease,
         transform .35s ease;
 
@@ -359,11 +357,33 @@ em{
 
 .menu a:hover{
 
-    opacity:.70;
+    letter-spacing:4px;
 
-    letter-spacing:4.2px;
+}
 
-    transform:translateY(-1px);
+.menu a:hover::after{
+
+    width:100%;
+
+}
+
+.menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-4px;
+
+    width:0;
+
+    height:1px;
+
+    background:#242424;
+
+    transition:width .30s ease;
 
 }
 
