@@ -562,40 +562,42 @@ em{
 
 .imagen-billy:hover{
 
-    animation:billyHover 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation:billyHover 1.4s cubic-bezier(.22,.61,.36,1) forwards;
 
 }
 
 
 /* ======================================================
-   DESPLAZAMIENTO LATERAL ELEGANTE
+   MOVIMIENTO ELEGANTE
 ====================================================== */
 
 @keyframes billyHover{
 
-
     0%{
 
-        transform:translateX(-50%);
+        transform:translateX(-50%) scale(1);
 
     }
 
+    35%{
 
-    45%{
-
-        transform:translateX(calc(-50% + 6px));
+        transform:translateX(calc(-50% + 4px)) scale(1.008);
 
     }
 
+    65%{
+
+        transform:translateX(calc(-50% + 6px)) scale(1.012);
+
+    }
 
     100%{
 
-        transform:translateX(-50%);
+        transform:translateX(-50%) scale(1);
 
     }
 
 }
-
 /* ======================================================
    13. PÁGINAS INTERIORES
 ====================================================== */
