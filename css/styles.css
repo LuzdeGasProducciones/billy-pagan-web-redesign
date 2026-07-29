@@ -151,7 +151,7 @@ em{
 
 
 /* ======================================================
-   4. HEADER / MENÚ ESCRITORIO
+   4. TIPOGRAFÍAS Y ELEMENTOS GENERALES
 ====================================================== */
 
 h1{
@@ -173,120 +173,24 @@ h1{
 }
 
 
-/* ======================================================
-   5. HERO
-====================================================== */
+a{
 
-.hero{
+    color:inherit;
 
-    position:relative;
-
-    width:100%;
-
-    height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    overflow:hidden;
-
-    background-image:url("../imagenes/inicio/fondo-web-index.jpg");
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
-    animation:zoomFondo 20s ease-in-out infinite alternate;
+    text-decoration:none;
 
 }
 
 
-.hero::before{
+em{
 
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:var(--capa);
-
-    z-index:1;
+    font-style:italic;
 
 }
 
 
 /* ======================================================
-   12. ANIMACIONES
-====================================================== */
-
-@keyframes zoomFondo{
-
-    from{
-
-        background-size:100%;
-
-    }
-
-    to{
-
-        background-size:112%;
-
-    }
-
-}
-
-
-@keyframes entradaTexto{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(50px);
-
-        filter:blur(8px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-        filter:blur(0);
-
-    }
-
-}
-
-
-@keyframes movimientoBilly{
-
-    from{
-
-        transform:translateX(-50%) scale(1);
-
-    }
-
-
-    to{
-
-        transform:translateX(-50%) scale(1.02);
-
-    }
-
-}
-
-
-/* ======================================================
-   13. MENÚ ESCRITORIO
+   5. HEADER / MENÚ ESCRITORIO
 ====================================================== */
 
 .menu{
@@ -323,6 +227,12 @@ h1{
 
     gap:30px;
 
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
 }
 
 
@@ -349,7 +259,7 @@ h1{
 
     text-shadow:0 1px 8px rgba(255,255,255,.50);
 
-    transition:all var(--transicion);
+    transition:.35s;
 
 }
 
@@ -364,7 +274,7 @@ h1{
 
 
 /* ======================================================
-   14. BOTÓN HAMBURGUESA
+   6. BOTÓN HAMBURGUESA
 ====================================================== */
 
 .hamburguesa{
@@ -389,30 +299,7 @@ h1{
 
 
 /* ======================================================
-   15. TIPOGRAFÍAS Y ELEMENTOS GENERALES
-====================================================== */
-
-
-h1,
-h2,
-h3{
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-weight:500;
-
-}
-
-
-p{
-
-    line-height:1.8;
-
-}
-
-
-/* ======================================================
-   16. MENÚ MÓVIL
+   7. MENÚ MÓVIL
 ====================================================== */
 
 .menu-movil{
@@ -487,18 +374,71 @@ p{
 
 
 /* ======================================================
-   18. CONTENIDO PRINCIPAL
+   8. CONTENEDORES GENERALES
 ====================================================== */
 
-.hero .contenido{
+.contenido{
 
     position:relative;
 
     z-index:5;
 
-    margin-left:38%;
-
     text-align:center;
+
+}
+
+
+/* ======================================================
+   9. HERO / PORTADA
+====================================================== */
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background-image:url("../imagenes/inicio/fondo-web-index.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    animation:zoomFondo 20s ease-in-out infinite alternate;
+
+}
+
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:var(--capa);
+
+    z-index:1;
+
+}
+
+
+.hero .contenido{
+
+    margin-left:38%;
 
     opacity:0;
 
@@ -534,68 +474,6 @@ p{
 
 
 /* ======================================================
-   19. HERO / PORTADA
-====================================================== */
-
-.hero{
-
-    position:relative;
-
-    width:100%;
-
-    min-height:100vh;
-
-    overflow:hidden;
-
-    background-image:url("../imagenes/inicio/fondo-web-index.jpg");
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
-}
-
-.hero::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:rgba(255,255,255,0.12);
-
-    z-index:1;
-
-}
-
-
-/* ======================================================
-   4. HEADER / MENÚ ESCRITORIO
-====================================================== */
-
-
-/* ======================================================
-   5. MENÚ MÓVIL / HAMBURGUESA
-====================================================== */
-
-
-/* ======================================================
-   6. CONTENIDO PRINCIPAL
-====================================================== */
-
-.contenido{
-
-    position:relative;
-
-    z-index:5;
-
-}
-
-
-/* ======================================================
    10. IMAGEN BILLY PAGÁN
 ====================================================== */
 
@@ -621,7 +499,170 @@ p{
 
 
 /* ======================================================
-   11. FOOTER
+   11. ANIMACIONES
+====================================================== */
+
+@keyframes zoomFondo{
+
+    from{
+
+        background-size:100%;
+
+    }
+
+    to{
+
+        background-size:112%;
+
+    }
+
+}
+
+
+@keyframes entradaTexto{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+        filter:blur(8px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+        filter:blur(0);
+
+    }
+
+}
+
+
+@keyframes movimientoBilly{
+
+    from{
+
+        transform:translateX(-50%) scale(1);
+
+    }
+
+
+    to{
+
+        transform:translateX(-50%) scale(1.02);
+
+    }
+
+}
+
+
+/* ======================================================
+   12. PÁGINAS INTERIORES
+====================================================== */
+
+.pagina{
+
+    position:relative;
+
+    min-height:100vh;
+
+    padding:170px 0 120px;
+
+    background-image:url("../imagenes/legal/fondo-legal-web.jpg");
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-size:cover;
+
+}
+
+
+.pagina::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,255,255,.15);
+
+}
+
+
+.contenido-pagina{
+
+    position:relative;
+
+    z-index:5;
+
+    width:min(900px,90%);
+
+    margin:0 auto;
+
+}
+
+
+.contenido-pagina h1{
+
+    margin-bottom:60px;
+
+    text-align:center;
+
+    font-size:clamp(50px,6vw,80px);
+
+}
+
+
+.contenido-pagina h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:32px;
+
+    font-weight:600;
+
+    color:var(--texto);
+
+}
+
+
+.contenido-pagina p{
+
+    margin-bottom:25px;
+
+    font-size:15px;
+
+    line-height:2;
+
+    text-align:justify;
+
+    color:var(--texto);
+
+}
+
+
+/* ======================================================
+   13. PÁGINA LEGAL
+====================================================== */
+
+
+
+
+/* ======================================================
+   14. FOOTER
 ====================================================== */
 
 .footer{
@@ -650,7 +691,7 @@ p{
 
 
 /* ======================================================
-   12. BARRA LEGAL
+   15. BARRA LEGAL
 ====================================================== */
 
 .barra-legal{
@@ -703,154 +744,15 @@ p{
 
 
 /* ======================================================
-   13. PÁGINA LEGAL
+   16. RESPONSIVE
 ====================================================== */
-
-.pagina-legal{
-
-    max-width:900px;
-
-    margin:180px auto 120px auto;
-
-    padding:0 40px;
-
-}
-
-
-.pagina-legal h1{
-
-    margin-bottom:60px;
-
-    text-align:center;
-
-    font-size:clamp(50px,6vw,80px);
-
-}
-
-
-.texto-legal{
-
-    font-size:15px;
-
-    line-height:2;
-
-    color:var(--texto);
-
-}
-
-
-.texto-legal h2{
-
-    margin-top:40px;
-
-    margin-bottom:15px;
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:32px;
-
-    font-weight:600;
-
-    color:var(--texto);
-
-}
-
-
-.texto-legal p{
-
-    margin-bottom:25px;
-
-    text-align:justify;
-
-}
-/* ======================================================
-   13. PÁGINAS INTERIORES
-====================================================== */
-
-.pagina{
-
-    position:relative;
-
-    min-height:100vh;
-
-    background-image:url("../imagenes/legal/fondo-legal-web.jpg");
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
-    padding:170px 0 120px;
-
-}
-
-
-.pagina::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:rgba(255,255,255,.15);
-
-}
-
-
-.contenido-pagina{
-
-    position:relative;
-
-    z-index:5;
-
-    width:min(900px,90%);
-
-    margin:auto;
-
-}
-
-
-.contenido-pagina h1{
-
-    margin-bottom:60px;
-
-    text-align:center;
-
-    font-size:clamp(60px,8vw,100px);
-
-}
-
-
-.contenido-pagina h2{
-
-    margin-top:45px;
-
-    margin-bottom:18px;
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:34px;
-
-    font-weight:600;
-
-}
-
-
-.contenido-pagina p{
-
-    margin-bottom:22px;
-
-    font-size:15px;
-
-    line-height:2;
-
-    text-align:justify;
-
-}
 
 
 /* ======================================================
-   9. RESPONSIVE MÓVIL
+   17. UTILIDADES
 ====================================================== */
+
+
+
+
+
