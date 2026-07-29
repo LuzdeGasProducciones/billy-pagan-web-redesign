@@ -34,34 +34,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
-    /* ==========================================
-       EFECTO SUAVE IMAGEN BILLY
-    ========================================== */
-
-    const hero = document.querySelector(".hero");
-    const imagenBilly = document.querySelector(".imagen-billy");
-
-    if (hero && imagenBilly) {
-
-        hero.addEventListener("mousemove", (e) => {
-
-            const rect = hero.getBoundingClientRect();
-
-            const porcentaje = (e.clientX - rect.left) / rect.width;
-
-            const desplazamiento = (porcentaje - 0.5) * 8;
-
-            imagenBilly.style.left = `calc(44% + ${desplazamiento}px)`;
-
-        });
-
-        hero.addEventListener("mouseleave", () => {
-
-            imagenBilly.style.left = "44%";
-
-        });
-
-    }
-
 });
