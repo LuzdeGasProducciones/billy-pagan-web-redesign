@@ -474,6 +474,8 @@ em{
 
     height:100vh;
 
+    min-height:100vh;
+
     display:flex;
 
     justify-content:center;
@@ -481,6 +483,8 @@ em{
     align-items:center;
 
     overflow:hidden;
+
+    isolation:isolate;
 
     background-image:url("../imagenes/inicio/fondo-web-vacio.jpg");
 
@@ -490,7 +494,7 @@ em{
 
     background-size:cover;
 
-    animation:zoomFondo 20s ease-in-out infinite alternate;
+    animation:zoomFondo 24s ease-in-out infinite alternate;
 
 }
 
@@ -589,9 +593,9 @@ em{
 
     left:43%;
 
-    bottom:-4%;
+    bottom:0;
 
-    height:112vh;
+    height:100vh;
 
     width:auto;
 
@@ -608,6 +612,10 @@ em{
     pointer-events:auto;
 
     will-change:transform;
+
+    animation:movimientoBilly 24s ease-in-out infinite alternate;
+
+    transition:transform .45s cubic-bezier(.22,.61,.36,1);
 
 }
 
@@ -733,18 +741,62 @@ em{
 /* ======================================================
    21. CONTACTO
 ====================================================== */
-
 /* ======================================================
    22. FOOTER / PIE DE PÁGINA
 ====================================================== */
 
-/* Reservado para páginas interiores */
-.footer{
+.barra-inferior{
 
-    display:none;
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:54px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:0 30px;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.28),
+        rgba(0,0,0,.12),
+        transparent
+    );
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    z-index:200;
 
 }
 
+.barra-inferior p{
+
+    margin:0;
+    font-family:"Montserrat",sans-serif;
+    font-size:11px;
+    font-weight:300;
+    letter-spacing:1.8px;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.88);
+    white-space:nowrap;
+
+}
+
+.barra-inferior a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+    transition:opacity .35s ease;
+
+}
+
+.barra-inferior a:hover{
+
+    opacity:.65;
+
+}
 
 /* ======================================================
    24. RESPONSIVE
