@@ -553,51 +553,12 @@ em{
 
     animation:movimientoBilly 20s ease-in-out infinite alternate;
 
-}
-
-
-/* ======================================================
-   EFECTO AL PASAR EL CURSOR
-====================================================== */
-
-.imagen-billy:hover{
-
-    animation:billyHover 1.4s cubic-bezier(.22,.61,.36,1) forwards;
+    transition:
+        left .8s cubic-bezier(.22,.61,.36,1),
+        transform .8s cubic-bezier(.22,.61,.36,1);
 
 }
 
-
-/* ======================================================
-   MOVIMIENTO ELEGANTE
-====================================================== */
-
-@keyframes billyHover{
-
-    0%{
-
-        transform:translateX(-50%) scale(1);
-
-    }
-
-    35%{
-
-        transform:translateX(calc(-50% + 4px)) scale(1.008);
-
-    }
-
-    65%{
-
-        transform:translateX(calc(-50% + 6px)) scale(1.012);
-
-    }
-
-    100%{
-
-        transform:translateX(-50%) scale(1);
-
-    }
-
-}
 /* ======================================================
    13. PÁGINAS INTERIORES
 ====================================================== */
