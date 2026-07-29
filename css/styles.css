@@ -710,97 +710,60 @@ em{
 
 }
 /* ======================================================
-   23. BARRA INFERIOR
+   12. IMAGEN BILLY PAGÁN
 ====================================================== */
 
-.barra-inferior{
+.imagen-billy {
 
-    position:fixed;
+    /* aquí ya tendrás tus propiedades actuales */
+    position:absolute;
+    /* tamaño */
+    /* posición */
+    /* etc. */
 
-    left:0;
 
-    bottom:0;
-
-    width:100%;
-
-    height:52px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:0 40px;
-
-    background:linear-gradient(
-        to top,
-        rgba(255,255,255,.12),
-        rgba(255,255,255,0)
-    );
-
-    backdrop-filter:blur(6px);
-
-    -webkit-backdrop-filter:blur(6px);
-
-    border-top:1px solid rgba(255,255,255,.18);
-
-    font-family:"Montserrat",sans-serif;
-
-    font-size:9px;
-
-    font-weight:300;
-
-    letter-spacing:1.8px;
-
-    line-height:1;
-
-    text-transform:uppercase;
-
-    color:rgba(255,255,255,.88);
-
-    z-index:999;
+    /* NUEVO */
+    transition: transform 0.35s ease;
+    transform-origin:center center;
 
 }
 
 
-/* ==========================================
-   TEXTO
-========================================== */
+.imagen-billy:hover {
 
-.barra-inferior p{
-
-    margin:0;
-
-    padding:0;
-
-    white-space:nowrap;
+    animation:vibracionBilly 0.45s ease-in-out;
 
 }
 
 
-/* ==========================================
-   ENLACES
-========================================== */
+@keyframes vibracionBilly {
 
-.barra-inferior a{
+    0% {
+        transform:translateX(0) rotate(0deg);
+    }
 
-    color:inherit;
+    20% {
+        transform:translateX(-3px) rotate(-0.5deg);
+    }
 
-    text-decoration:none;
+    40% {
+        transform:translateX(3px) rotate(0.5deg);
+    }
 
-    transition:
-        opacity .35s ease,
-        color .35s ease;
+    60% {
+        transform:translateX(-2px) rotate(-0.3deg);
+    }
+
+    80% {
+        transform:translateX(2px) rotate(0.3deg);
+    }
+
+    100% {
+        transform:translateX(0) rotate(0deg);
+    }
 
 }
 
-
-.barra-inferior a:hover{
-
-    opacity:.60;
-
-}
 
 /* ======================================================
    24. RESPONSIVE
