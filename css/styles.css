@@ -287,14 +287,15 @@ em{
 
     z-index:100;
 
-    /* Hacer el menú superior más oscuro para garantizar contraste
-       en páginas con fondos claros. Usamos color sólido ligeramente
-       translucido y un pequeño desenfoque para mantener la estética. */
-    background: rgba(36,36,36,.96);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    border-bottom:1px solid rgba(0,0,0,.12);
-    transition: background var(--transicion);
+    background:rgba(36,36,36,.38);
+
+    backdrop-filter:blur(14px);
+
+    -webkit-backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(255,255,255,.10);
+
+    transition:background var(--transicion);
 
 }
 
@@ -348,7 +349,7 @@ em{
 
     text-transform:uppercase;
 
-    color:rgba(255,255,255,.96);
+    color:rgba(255,255,255,.94);
 
     text-decoration:none;
 
@@ -776,17 +777,17 @@ em{
 
     padding:14px 0;
 
-    background:var(--menu);
+    background:rgba(36,36,36,.28);
 
-    color:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);
 
-    text-align:center;
+    -webkit-backdrop-filter:blur(10px);
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    color:rgba(255,255,255,.94);
 
     z-index:150;
-
-    text-shadow:0 2px 10px rgba(0,0,0,.20);
-
-    border-top:1px solid var(--borde-oscuro);
 
 }
 
@@ -808,13 +809,14 @@ em{
 
 .barra-inferior a{
 
-    color:rgba(255,255,255,.92);
+    color:rgba(255,255,255,.94);
 
     text-decoration:none;
 
     margin:0 8px;
 
-    transition:opacity var(--transicion), letter-spacing var(--transicion);
+    transition:opacity var(--transicion),
+               letter-spacing var(--transicion);
 
 }
 
