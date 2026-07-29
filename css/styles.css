@@ -559,8 +559,6 @@ em{
 
     z-index:3;
 
-    animation:movimientoBilly 20s ease-in-out infinite alternate;
-
     will-change:transform;
 
 }
