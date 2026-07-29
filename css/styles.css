@@ -555,18 +555,20 @@ em{
 
 }
 
+
 /* ======================================================
-   EFECTO ELEGANTE AL PASAR EL CURSOR
+   EFECTO AL PASAR EL CURSOR
 ====================================================== */
 
 .imagen-billy:hover{
 
-    animation:billyHover 1.8s ease-in-out forwards;
+    animation:billyHover 1.2s ease-in-out forwards;
 
 }
 
+
 /* ======================================================
-   MOVIMIENTO SUAVE DE INTERACCIÓN
+   DESPLAZAMIENTO ELEGANTE
 ====================================================== */
 
 @keyframes billyHover{
@@ -574,28 +576,28 @@ em{
 
     0%{
 
-        transform:translateX(-50%) scale(1);
+        transform:translateX(-50%);
 
     }
 
 
     40%{
 
-        transform:translateX(-50%) scale(1.015) rotate(0.25deg);
+        transform:translateX(calc(-50% + 8px));
 
     }
 
 
     70%{
 
-        transform:translateX(-50%) scale(1.02) rotate(-0.15deg);
+        transform:translateX(calc(-50% + 5px));
 
     }
 
 
     100%{
 
-        transform:translateX(-50%) scale(1);
+        transform:translateX(-50%);
 
     }
 
