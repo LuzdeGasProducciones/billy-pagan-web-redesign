@@ -287,15 +287,13 @@ em{
 
     z-index:100;
 
-    background:rgba(36,36,36,.38);
+    background:transparent;
 
-    backdrop-filter:blur(14px);
+    border:none;
 
-    -webkit-backdrop-filter:blur(14px);
+    backdrop-filter:none;
 
-    border-bottom:1px solid rgba(255,255,255,.10);
-
-    transition:background var(--transicion);
+    -webkit-backdrop-filter:none;
 
 }
 
@@ -777,15 +775,13 @@ em{
 
     padding:14px 0;
 
-    background:rgba(36,36,36,.28);
+    background:rgba(0,0,0,.18);
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(18px);
 
-    -webkit-backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(18px);
 
     border-top:1px solid rgba(255,255,255,.08);
-
-    color:rgba(255,255,255,.94);
 
     z-index:150;
 
