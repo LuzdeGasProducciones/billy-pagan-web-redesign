@@ -555,15 +555,40 @@ em{
 
 }
 
-
-/* Vibración al pasar el cursor */
+/* ======================================================
+   EFECTO AL PASAR EL CURSOR
+====================================================== */
 
 .imagen-billy:hover{
 
-    animation:
-    movimientoBilly 20s ease-in-out infinite alternate,
-    vibracionBilly 0.45s ease-in-out;
+    animation:vibracionBilly 0.45s ease-in-out;
 
+}
+
+/* ======================================================
+   VIBRACIÓN BILLY
+====================================================== */
+
+@keyframes vibracionBilly{
+
+    0%{
+        transform:translateX(-50%) rotate(0deg);
+    }
+    20%{
+        transform:translateX(calc(-50% - 5px)) rotate(-0.6deg);
+    }
+    40%{
+        transform:translateX(calc(-50% + 5px)) rotate(0.6deg);
+    }
+    60%{
+        transform:translateX(calc(-50% - 3px)) rotate(-0.4deg);
+    }
+    80%{
+        transform:translateX(calc(-50% + 3px)) rotate(0.4deg);
+    }
+    100%{
+        transform:translateX(-50%) rotate(0deg);
+    }
 }
 
 /* ======================================================
