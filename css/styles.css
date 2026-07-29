@@ -562,13 +562,13 @@ em{
 
 .imagen-billy:hover{
 
-    animation:billyHover 1.2s ease-in-out forwards;
+    animation:billyHover 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 
 }
 
 
 /* ======================================================
-   DESPLAZAMIENTO ELEGANTE
+   DESPLAZAMIENTO LATERAL ELEGANTE
 ====================================================== */
 
 @keyframes billyHover{
@@ -581,16 +581,9 @@ em{
     }
 
 
-    40%{
+    45%{
 
-        transform:translateX(calc(-50% + 8px));
-
-    }
-
-
-    70%{
-
-        transform:translateX(calc(-50% + 5px));
+        transform:translateX(calc(-50% + 6px));
 
     }
 
