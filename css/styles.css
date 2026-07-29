@@ -40,6 +40,10 @@
 
     --transicion:.30s ease;
 
+    /* IMAGEN DE FONDO GLOBAL */
+
+    --fondo: url("../imagenes/inicio/fondo-web-vacio.jpg");
+
 }
 
 /* ======================================================
@@ -508,7 +512,7 @@ em{
 
     overflow:hidden;
 
-    background-image:url("../imagenes/inicio/fondo-web-vacio.jpg");
+    background-image:var(--fondo);
 
     background-position:center center;
 
@@ -651,7 +655,7 @@ em{
 
     padding:170px 0 120px;
 
-    background-image:url("../imagenes/legal/fondo-legal-web.jpg");
+    background-image:var(--fondo);
 
     background-position:center;
 
