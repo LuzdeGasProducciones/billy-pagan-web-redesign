@@ -214,6 +214,8 @@ em{
     width:100%;
     padding-top:42px;
     z-index:100;
+    /* Restaurar apariencia oscura detrás del menú para mejorar contraste */
+    background:linear-gradient(rgba(36,36,36,.92), rgba(36,36,36,.92));
 }
 
 
