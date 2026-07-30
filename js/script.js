@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    console.log("Billy Pagán · Sitio Oficial");
+    // Quitar console.log en producción
+    // console.log("Billy Pagán · Sitio Oficial");
 
     /* ==========================================
-       MENÚ MÓVIL
+       MENÚ MÓVIL (accesible)
     ========================================== */
 
     const hamburguesa = document.getElementById("hamburguesa");
@@ -11,12 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (hamburguesa && menuMovil) {
 
+        // atributos ARIA iniciales
+        hamburguesa.setAttribute("aria-controls", "menuMovil");
+        hamburguesa.setAttribute("aria-expanded", "false");
+        hamburguesa.setAttribute("aria-label", "Abrir menú");
+
         hamburguesa.addEventListener("click", () => {
 
-            menuMovil.classList.toggle("abierto");
+            const abierto = menuMovil.classList.toggle("abierto");
 
-            hamburguesa.textContent =
-                menuMovil.classList.contains("abierto") ? "✕" : "☰";
+            hamburguesa.textContent = abierto ? "✕" : "☰";
+            hamburguesa.setAttribute("aria-expanded", String(abierto));
 
         });
 
@@ -27,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 menuMovil.classList.remove("abierto");
 
                 hamburguesa.textContent = "☰";
+                hamburguesa.setAttribute("aria-expanded", "false");
 
             });
 
@@ -36,13 +43,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==========================================
-       EFECTO PREMIUM IMAGEN BILLY
+       EFECTO PREMIUM IMAGEN BILLY (respetando prefers-reduced-motion)
     ========================================== */
 
     const hero = document.querySelector(".hero");
     const imagenBilly = document.querySelector(".imagen-billy");
 
     if (!hero || !imagenBilly) return;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) {
+        imagenBilly.style.transform = 'translateX(-50%) translateY(0) scale(1)';
+        return;
+    }
 
     let objetivoX = 0;
     let objetivoY = 0;
@@ -60,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
         objetivoX = x * 10;
         objetivoY = y * 6;
 
-    });
+    }, { passive: true });
 
     hero.addEventListener("mouseleave", () => {
 
@@ -83,4 +96,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     animar();
 
-});});
+});
