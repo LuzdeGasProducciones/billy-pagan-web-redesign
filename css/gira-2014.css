@@ -1,0 +1,32 @@
+/* GIRA 2014 — Estilos para que coincida con GIRA 2015: misma tipografía, centrado y ciudades en negrita */
+
+.gira-2014 .tour-card{
+  text-align:center;
+}
+
+.gira-2014 .tour-card h2{
+  margin:0 0 12px;
+  font-family:"Cormorant Garamond",serif;
+  font-size:34px;
+  font-weight:600;
+  color:var(--texto);
+}
+
+.gira-2014 .tour-card pre{
+  font-family:"Montserrat",sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  white-space:pre-wrap;
+  text-align:center;
+  margin:0 0 18px;
+  color:var(--texto-secundario);
+}
+
+/* Si los nombres de las ciudades están marcados con <strong> o con una clase .ciudad */
+.gira-2014 .tour-card pre strong,
+.gira-2014 .tour-card pre .ciudad,
+.gira-2014 strong,
+.gira-2014 .ciudad{
+  font-weight:700;
+  color:var(--texto);
+}
