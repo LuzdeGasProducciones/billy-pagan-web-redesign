@@ -761,6 +761,54 @@ em{
    16. VIDEOS
 ==================================================== */
 
+.videos-page{
+    display:flex;
+    align-items:center;
+}
+
+.videos-contenido{
+    text-align:center;
+}
+
+.videos-card{
+    width:min(760px, 92%);
+    margin:0 auto;
+    padding:36px 28px;
+    background:rgba(255,255,255,.92);
+    border:1px solid rgba(36,36,36,.08);
+    border-radius:18px;
+    box-shadow:var(--sombra-caja);
+    backdrop-filter:blur(8px);
+}
+
+.videos-texto{
+    margin:0 0 26px;
+    font-size:16px;
+    line-height:1.9;
+    text-align:center;
+    color:var(--texto-secundario);
+}
+
+.boton-youtube{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 24px;
+    background:#242424;
+    color:#ffffff;
+    border-radius:999px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:12px;
+    transition:transform var(--transicion), opacity var(--transicion), box-shadow var(--transicion);
+    box-shadow:0 10px 24px rgba(0,0,0,.14);
+}
+
+.boton-youtube:hover{
+    transform:translateY(-2px);
+    opacity:.92;
+}
+
 /* ======================================================
    17. CONCIERTOS
 ==================================================== */
@@ -998,3 +1046,4 @@ em{
     }
 
     .tour-card{
+
