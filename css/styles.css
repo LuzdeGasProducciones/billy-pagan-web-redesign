@@ -998,3 +998,134 @@ em{
     }
 
     .tour-card{
+
+
+/* ======================================================
+   25. GLOBO TERRÁQUEO (histórico de conciertos)
+====================================================== */
+
+.globo-css {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin: 10px 0 28px;
+
+}
+
+.globo-css__sphere {
+
+    width: 140px;
+
+    height: 140px;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 30% 30%, #9be4ff 0%, #4aa6db 32%, #1f6ea3 58%, #0b2f4b 100%);
+
+    box-shadow: 0 0 28px rgba(0, 120, 200, 0.25), inset -6px -6px 18px rgba(0, 0, 0, 0.35);
+
+    animation: rotarGlobo 10s linear infinite;
+
+}
+
+.globo-css__sphere::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0 18%,
+            rgba(255, 255, 255, 0.16) 18% 20%,
+            transparent 20% 38%,
+            rgba(255, 255, 255, 0.16) 38% 40%,
+            transparent 40% 58%,
+            rgba(255, 255, 255, 0.16) 58% 60%,
+            transparent 60% 78%,
+            rgba(255, 255, 255, 0.16) 78% 80%,
+            transparent 80% 100%
+        ),
+        linear-gradient(
+            0deg,
+            transparent 0 18%,
+            rgba(255, 255, 255, 0.10) 18% 20%,
+            transparent 20% 38%,
+            rgba(255, 255, 255, 0.10) 38% 40%,
+            transparent 40% 58%,
+            rgba(255, 255, 255, 0.10) 58% 60%,
+            transparent 60% 78%,
+            rgba(255, 255, 255, 0.10) 78% 80%,
+            transparent 80% 100%
+        );
+
+    opacity: 0.55;
+
+}
+
+.globo-css__sphere::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 18px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.12) 16%, transparent 28%),
+        radial-gradient(circle at 52% 58%, #3cbf5b 0 10%, transparent 11%),
+        radial-gradient(circle at 66% 37%, #3cbf5b 0 8%, transparent 9%),
+        radial-gradient(circle at 41% 72%, #3cbf5b 0 7%, transparent 8%),
+        radial-gradient(circle at 61% 72%, #3cbf5b 0 6%, transparent 7%);
+
+    opacity: 0.85;
+
+}
+
+.globo-css__shine {
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    background: radial-gradient(circle at 30% 28%, rgba(255, 255, 255, 0.35), transparent 28%);
+
+    pointer-events: none;
+
+}
+
+@keyframes rotarGlobo {
+
+    from { transform: rotate(0deg); }
+
+    to   { transform: rotate(360deg); }
+
+}
+
+@media (max-width: 880px) {
+
+    .globo-css__sphere {
+
+        width: 110px;
+
+        height: 110px;
+
+    }
+
+}
