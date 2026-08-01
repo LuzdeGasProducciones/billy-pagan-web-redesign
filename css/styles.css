@@ -175,21 +175,6 @@ h1{
 }
 
 
-a{
-
-    color:inherit;
-
-    text-decoration:none;
-
-}
-
-
-em{
-
-    font-style:italic;
-
-}
-
 /* Focus visible (accesibilidad) */
 :focus-visible{
     outline:3px solid rgba(36,36,36,0.12);
@@ -828,6 +813,53 @@ em{
    21. CONTACTO
 ==================================================== */
 
+/* Wrapper para centrar botones/bloques de acción */
+.boton-wrapper{
+
+    text-align:center;
+
+    margin-top:30px;
+
+}
+
+/* Botón de contacto externo */
+.boton-contacto{
+
+    display:inline-block;
+
+    padding:12px 20px;
+
+    background:var(--menu);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    border-radius:6px;
+
+}
+
+/* Párrafo informativo de conciertos (centrado, cursiva) */
+.aviso-conciertos{
+
+    text-align:center;
+
+    margin-top:20px;
+
+    font-style:italic;
+
+    max-width:720px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
 /* ======================================================
    22. FOOTER / PIE DE PÁGINA
 ==================================================== */
@@ -998,3 +1030,9 @@ em{
     }
 
     .tour-card{
+
+        padding:18px 16px;
+
+    }
+
+}
