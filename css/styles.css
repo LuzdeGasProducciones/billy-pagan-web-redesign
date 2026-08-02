@@ -593,6 +593,23 @@ h1{
    19. GALERIA
 ==================================================== */
 
+.galeria-placeholder{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 0;
+    text-align:center;
+}
+
+.galeria-placeholder span{
+    font-family:"Montserrat",sans-serif;
+    font-size:13px;
+    font-weight:300;
+    letter-spacing:8px;
+    text-transform:uppercase;
+    color:var(--texto-secundario);
+}
+
 /* ======================================================
    20. TIENDA
 ==================================================== */
