@@ -753,6 +753,50 @@ em{
    14. BIOGRAFIA
 ==================================================== */
 
+.biografia-page{
+    display:flex;
+    align-items:center;
+}
+
+.biografia-contenido{
+    text-align:center;
+}
+
+/* Reusa la tarjeta de gira con mínimos ajustes */
+.biografia-page .tour-card{
+    margin:0 auto;
+    text-align:left;
+}
+
+.biografia-page .tour-card h2{
+    text-align:center;
+}
+
+/* Lectura larga cómoda */
+.biografia-page .tour-card p{
+    margin:0 0 16px;
+    font-family:"Montserrat",sans-serif;
+    font-size:16px;
+    line-height:1.85;
+    text-align:justify;
+    color:var(--texto-secundario);
+}
+
+.biografia-page .tour-card .bio-intro{
+    text-align:center;
+    font-size:18px;
+    line-height:1.7;
+    color:var(--texto);
+    margin-bottom:20px;
+}
+
+.biografia-page .tour-card hr{
+    border:none;
+    height:1px;
+    background:rgba(36,36,36,.12);
+    margin:16px 0 22px;
+}
+
 /* ======================================================
    15. MUSICA
 ==================================================== */
@@ -998,81 +1042,3 @@ em{
         font-size:14px; /* aumentar tamaño para toque */
 
         letter-spacing:2.4px;
-
-    }
-
-
-    .hamburguesa{
-
-        display:block;
-
-    }
-
-
-    .menu{
-
-        padding-top:18px;
-
-    }
-
-
-    .menu ul{
-
-        display:none;
-
-    }
-
-
-    .menu-movil{
-
-        display:flex;
-
-    }
-
-
-    .hero .contenido{
-
-        width:90%;
-
-        margin-left:5%;
-
-        margin-top:0;
-
-        animation:none;
-
-        opacity:1;
-
-    }
-
-
-    .imagen-billy{
-
-        display:none;
-
-    }
-
-
-    .barra-inferior{
-
-        padding:12px 8px;
-
-        font-size:12px;
-
-    }
-
-    .videos-card{
-        padding:30px 20px;
-    }
-
-    .videos-texto{
-        font-size:15px;
-        line-height:1.8;
-    }
-
-    .boton-youtube{
-        width:100%;
-        max-width:320px;
-    }
-
-    .tour-card{
-
