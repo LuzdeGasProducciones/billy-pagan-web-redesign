@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    const tiendaDestino = "/billy-pagan-web-redesign/paginas/tienda.html";
+
+    document.querySelectorAll('a[href*="payhip.com/LuzdeGasRecords"]').forEach((enlace) => {
+        enlace.setAttribute("href", tiendaDestino);
+        enlace.removeAttribute("target");
+        enlace.removeAttribute("rel");
+    });
+
     // Quitar console.log en producción
     // console.log("Billy Pagán · Sitio Oficial");
 
