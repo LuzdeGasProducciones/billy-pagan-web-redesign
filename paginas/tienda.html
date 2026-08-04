@@ -28,14 +28,21 @@
 
       <div class="tienda-grid">
         <article class="producto-card">
-          <object
-            class="producto-portada"
-            data="../imagenes/tienda/perdido-studios-tienda.pdf"
-            type="application/pdf"
-            aria-label="Portado Perdido Studios"
-          >
-            <p>No se pudo mostrar el PDF. <a href="../imagenes/tienda/perdido-studios-tienda.pdf" target="_blank" rel="noopener noreferrer">Abrir PDF</a></p>
-          </object>
+          <div class="producto-visor">
+            <iframe
+              class="producto-portada"
+              src="../imagenes/tienda/perdido-studios-tienda.pdf"
+              title="Portada Perdido Studios"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
+
+          <p class="producto-ayuda">
+            Si el PDF no se muestra correctamente,
+            <a href="../imagenes/tienda/perdido-studios-tienda.pdf" target="_blank" rel="noopener noreferrer">abrirlo en una pestaña</a>.
+          </p>
+
           <a
             class="boton-comprar"
             href="https://payhip.com/b/KcRB6"
