@@ -927,6 +927,32 @@ em{
    19. GALERIA
 ==================================================== */
 
+.galeria-page{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100dvh;
+    padding:140px 16px 90px;
+}
+
+.galeria-contenido{
+    width:100%;
+    max-width:900px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.galeria-contenido h2,
+.galeria-contenido p{
+    text-align:center;
+}
+
+@media (max-width:768px){
+    .galeria-page{
+        padding:120px 16px 80px;
+    }
+}
+
 /* ======================================================
    20. TIENDA
 ==================================================== */
@@ -998,47 +1024,4 @@ em{
 }
 
 .barra-inferior a{
-
-    color:inherit;
-
-    text-decoration:none;
-
-    transition:none;
-
-}
-
-.barra-inferior a:hover,
-.barra-inferior a:focus,
-.barra-inferior a:active,
-.barra-inferior a:visited{
-
-    color:inherit;
-
-    text-decoration:none;
-
-    opacity:1 !important;
-
-    letter-spacing:2px !important;
-
-    transform:none !important;
-
-}
-
-/* ======================================================
-   24. RESPONSIVE
-==================================================== */
-
-@media (max-width: 880px){
-
-    .menu ul{
-
-        gap:18px;
-
-    }
-
-
-    .menu a{
-
-        font-size:14px; /* aumentar tamaño para toque */
-
-        letter-spacing:2.4px;
+[...]
