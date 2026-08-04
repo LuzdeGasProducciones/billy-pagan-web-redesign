@@ -1,0 +1,76 @@
+/* Estilos específicos para la página de tienda */
+
+.tienda-page .barra-inferior {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(36, 36, 36, 0.08);
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.03);
+  z-index: 150;
+}
+
+.tienda-page .barra-inferior p {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--menu);
+  text-align: center;
+}
+
+.tienda-page .barra-inferior a {
+  color: var(--menu);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.tienda-page .barra-inferior a:hover {
+  opacity: 0.75;
+}
+
+.tienda-page .producto-ayuda {
+  margin: 0 0 22px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--texto-secundario);
+  letter-spacing: 0.3px;
+}
+
+.tienda-page .boton-comprar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background: var(--menu);
+  color: var(--blanco);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: transform var(--transicion), opacity var(--transicion), box-shadow var(--transicion);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+}
+
+.tienda-page .boton-comprar:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+}
