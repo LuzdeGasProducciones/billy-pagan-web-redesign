@@ -43,8 +43,6 @@
     /* IMAGEN DE FONDO GLOBAL */
 
     --fondo: url("../imagenes/inicio/fondo-web-vacio.jpg");
-    /* Versión optimizada para móviles (generar y subir una imagen más pequeña) */
-    --fondo-mobile: url("../imagenes/inicio/fondo-web-vacio-480.jpg");
 
 }
 
@@ -70,6 +68,8 @@ body{
 
     min-height:100%;
 
+    scroll-behavior:smooth;
+
 }
 
 
@@ -79,9 +79,9 @@ body{
 
     overflow-x:hidden;
 
-    background:#ffffff;
+    background:var(--blanco);
 
-    color:#202020;
+    color:var(--texto);
 
 }
 
@@ -91,6 +91,13 @@ a{
     text-decoration:none;
 
     color:inherit;
+
+}
+
+
+em{
+
+    font-style:italic;
 
 }
 
@@ -126,34 +133,7 @@ button{
 }
 
 /* ======================================================
-   3. BASE
-==================================================== */
-
-html,
-body{
-
-    scroll-behavior:smooth;
-
-}
-
-
-body{
-
-    color:var(--texto);
-
-    background:var(--blanco);
-
-}
-
-
-em{
-
-    font-style:italic;
-
-}
-
-/* ======================================================
-   4. TIPOGRAFÍAS Y ELEMENTOS GENERALES
+   3. TIPOGRAFÍAS Y ELEMENTOS GENERALES
 ==================================================== */
 
 h1{
@@ -171,22 +151,6 @@ h1{
     color:var(--texto);
 
     text-shadow:var(--sombra-texto);
-
-}
-
-
-a{
-
-    color:inherit;
-
-    text-decoration:none;
-
-}
-
-
-em{
-
-    font-style:italic;
 
 }
 
@@ -250,28 +214,6 @@ em{
         transform:translateY(0);
 
         filter:blur(0);
-
-    }
-
-}
-
-
-/* ======================================================
-   MOVIMIENTO BILLY PAGÁN
-   (Reservado para futuras animaciones)
-====================================================== */
-
-@keyframes movimientoBilly{
-
-    from{
-
-        transform:translateX(-50%);
-
-    }
-
-    to{
-
-        transform:translateX(-50%);
 
     }
 
@@ -689,7 +631,7 @@ em{
 
     inset:0;
 
-    background:rgba(255,255,255,.15);
+    background:var(--capa);
 
 }
 
@@ -762,39 +704,25 @@ em{
     text-align:center;
 }
 
-/* Reusa la tarjeta de gira con mínimos ajustes */
-.biografia-page .tour-card{
+/* Tarjeta de contenido de la biografia */
+.biografia-card{
+    background:rgba(255,255,255,.95);
+    padding:28px 32px;
+    border-radius:12px;
+    box-shadow:var(--sombra-caja);
+    max-width:820px;
+    width:92%;
     margin:0 auto;
     text-align:left;
 }
 
-.biografia-page .tour-card h2{
-    text-align:center;
-}
-
-/* Lectura larga cómoda */
-.biografia-page .tour-card p{
+.biografia-card p{
     margin:0 0 16px;
     font-family:"Montserrat",sans-serif;
     font-size:16px;
     line-height:1.85;
     text-align:justify;
     color:var(--texto-secundario);
-}
-
-.biografia-page .tour-card .bio-intro{
-    text-align:center;
-    font-size:18px;
-    line-height:1.7;
-    color:var(--texto);
-    margin-bottom:20px;
-}
-
-.biografia-page .tour-card hr{
-    border:none;
-    height:1px;
-    background:rgba(36,36,36,.12);
-    margin:16px 0 22px;
 }
 
 /* ======================================================
@@ -909,6 +837,18 @@ em{
 }
 
 .boton-historico{
+    display:inline-block;
+    padding:12px 20px;
+    background:var(--menu);
+    color:#fff;
+    text-decoration:none;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    border-radius:6px;
+}
+
+/* Botón de contacto externo — mismos estilos base que boton-historico */
+.boton-contacto{
     display:inline-block;
     padding:12px 20px;
     background:var(--menu);
@@ -1100,5 +1040,75 @@ em{
     background:transparent;
 
     z-index:150;
+
+}
+
+.barra-inferior p{
+    margin:0;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:6px;
+    font-family:"Montserrat",sans-serif;
+    font-size:10px;
+    font-weight:300;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--menu);
+    text-align:center;
+}
+
+.barra-inferior a{
+    color:var(--menu);
+    transition:opacity var(--transicion);
+}
+
+.barra-inferior a:hover{
+    opacity:.70;
+}
+
+/* ======================================================
+   23. RESPONSIVE — MENÚ MÓVIL
+==================================================== */
+
+@media (max-width:768px){
+
+    .menu nav{
+        display:none;
+    }
+
+    .hamburguesa{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .menu-movil{
+        display:flex;
+    }
+
+}
+
+/* ======================================================
+   24. PREFERENCIAS DE MOVIMIENTO REDUCIDO
+==================================================== */
+
+@media (prefers-reduced-motion: reduce){
+
+    .hero{
+        animation:none;
+    }
+
+    .hero .contenido{
+        animation:none;
+        opacity:1;
+    }
+
+    *,
+    *::before,
+    *::after{
+        transition-duration:.01ms !important;
+    }
 
 }

@@ -1,0 +1,12 @@
+/* ======================================================
+   TIENDA — estilos específicos de la página de tienda
+====================================================== */
+
+.barra-inferior{
+    background:rgba(255,255,255,.82);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+    border-top:1px solid rgba(36,36,36,.08);
+    box-shadow:0 -1px 0 rgba(0,0,0,.03);
+    padding:0 20px;
+}
