@@ -1,30 +1,97 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tienda | Billy Pagán</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/tienda.css" />
-  </head>
-  <body>
-    <header class="menu" aria-label="Menú principal">
-      <nav>
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="./biografia.html">Biografía</a></li>
-          <li><a href="./musica.html">Música</a></li>
-          <li><a href="./videos.html">Vídeos</a></li>
-          <li><a href="./conciertos.html">Conciertos</a></li>
-          <li><a href="./galeria.html">Galería</a></li>
-          <li><a href="./tienda.html" aria-current="page">Tienda</a></li>
-          <li><a href="./contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main class="pagina tienda-page">
-      <section class="contenido-pagina tienda-contenido">
+<head>
+
+    <!-- ==========================================
+         CONFIGURACIÓN GENERAL
+    ========================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tienda | Billy Pagán</title>
+
+    <!-- ==========================================
+         TIPOGRAFÍAS
+    ========================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+
+    <!-- ==========================================
+         CSS
+    ========================================== -->
+
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+
+<body>
+
+
+<!-- ==================================================
+     CABECERA / MENÚ
+================================================== -->
+
+<header class="menu">
+
+    <nav>
+
+        <ul>
+
+            <li><a href="../index.html">INICIO</a></li>
+            <li><a href="biografia.html">BIOGRAFÍA</a></li>
+            <li><a href="musica.html">MÚSICA</a></li>
+            <li><a href="videos.html">VÍDEOS</a></li>
+            <li><a href="conciertos/conciertos.html">CONCIERTOS</a></li>
+            <li><a href="galeria.html">GALERÍA</a></li>
+            <li><a href="tienda.html" aria-current="page">TIENDA</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- ==================================================
+     MENÚ MÓVIL
+================================================== -->
+
+<button class="hamburguesa" id="hamburguesa">
+
+    ☰
+
+</button>
+
+
+<nav class="menu-movil" id="menuMovil">
+
+    <a href="../index.html">INICIO</a>
+    <a href="biografia.html">BIOGRAFÍA</a>
+    <a href="musica.html">MÚSICA</a>
+    <a href="videos.html">VÍDEOS</a>
+    <a href="conciertos/conciertos.html">CONCIERTOS</a>
+    <a href="galeria.html">GALERÍA</a>
+    <a href="tienda.html">TIENDA</a>
+    <a href="contacto.html">CONTACTO</a>
+
+</nav>
+
+
+<!-- ==================================================
+     CONTENIDO
+================================================== -->
+
+<section class="pagina tienda-page">
+
+    <main class="contenido-pagina tienda-contenido">
+
         <h1>TIENDA</h1>
 
         <div class="tienda-grid">
@@ -62,22 +129,47 @@
               rel="noopener noreferrer"
               aria-label="Comprar Perdido Studios"
             >
-              Comprar
+              COMPRAR
             </a>
           </article>
         </div>
-      </section>
+
     </main>
 
-    <footer class="barra-inferior">
-      <p>
-        © 2026
-        <a href="../index.html">BILLY PAGÁN · SITIO OFICIAL</a>
-        · TODOS LOS DERECHOS RESERVADOS ·
-        <a href="terminos-condiciones.html">TÉRMINOS Y CONDICIONES</a>
-      </p>
-    </footer>
+</section>
 
-    <script src="../js/script.js"></script>
-  </body>
+
+<!-- ==================================================
+     BARRA INFERIOR
+================================================== -->
+
+<footer class="barra-inferior">
+
+    <p>
+
+        © 2026
+
+        <a href="../index.html">
+            BILLY PAGÁN · SITIO OFICIAL
+        </a>
+
+        · TODOS LOS DERECHOS RESERVADOS ·
+
+        <a href="terminos-condiciones.html">
+            TÉRMINOS Y CONDICIONES
+        </a>
+
+    </p>
+
+</footer>
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script src="../js/script.js"></script>
+
+</body>
+
 </html>

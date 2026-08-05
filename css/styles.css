@@ -43,9 +43,6 @@
     /* IMAGEN DE FONDO GLOBAL */
 
     --fondo: url("../imagenes/inicio/fondo-web-vacio.jpg");
-    /* Versión optimizada para móviles (generar y subir una imagen más pequeña) */
-    --fondo-mobile: url("../imagenes/inicio/fondo-web-vacio-480.jpg");
-
 }
 
 /* ======================================================
@@ -174,21 +171,6 @@ h1{
 
 }
 
-
-a{
-
-    color:inherit;
-
-    text-decoration:none;
-
-}
-
-
-em{
-
-    font-style:italic;
-
-}
 
 /* Focus visible (accesibilidad) */
 :focus-visible{
