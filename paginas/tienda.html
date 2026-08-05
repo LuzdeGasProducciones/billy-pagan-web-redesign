@@ -1,12 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
+
+    <!-- ==========================================
+         CONFIGURACIÓN GENERAL
+    ========================================== -->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Tienda | Billy Pagán</title>
+
+    <!-- ==========================================
+         TIPOGRAFÍAS
+    ========================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- ==========================================
+         CSS
+    ========================================== -->
 
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/tienda.css">
@@ -15,7 +32,11 @@
 
 <body>
 
-<header class="menu" aria-label="Menú principal">
+<!-- ==================================================
+     CABECERA / MENÚ
+================================================== -->
+
+<header class="menu">
 
     <nav>
 
@@ -36,6 +57,33 @@
 
 </header>
 
+<!-- ==================================================
+     MENÚ MÓVIL
+================================================== -->
+
+<button class="hamburguesa" id="hamburguesa">
+
+    ☰
+
+</button>
+
+<nav class="menu-movil" id="menuMovil">
+
+    <a href="../index.html">INICIO</a>
+    <a href="biografia.html">BIOGRAFÍA</a>
+    <a href="musica.html">MÚSICA</a>
+    <a href="videos.html">VÍDEOS</a>
+    <a href="conciertos/conciertos.html">CONCIERTOS</a>
+    <a href="galeria.html">GALERÍA</a>
+    <a href="tienda.html" aria-current="page">TIENDA</a>
+    <a href="contacto.html">CONTACTO</a>
+
+</nav>
+
+<!-- ==================================================
+     CONTENIDO
+================================================== -->
+
 <main class="pagina tienda-page">
 
     <section class="contenido-pagina tienda-contenido">
@@ -51,7 +99,7 @@
                     <img
                         class="producto-portada"
                         src="../imagenes/tienda/perdido-studios-tienda.png"
-                        alt="Portada de Perdido Studios, de Billy Pagán"
+                        alt="Portada del álbum Perdido Studios de Billy Pagán"
                         draggable="false"
                     >
 
@@ -75,6 +123,10 @@
 
 </main>
 
+<!-- ==================================================
+     BARRA INFERIOR
+================================================== -->
+
 <footer class="barra-inferior">
 
     <p>
@@ -94,6 +146,10 @@
     </p>
 
 </footer>
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
 
 <script src="../js/script.js"></script>
 
