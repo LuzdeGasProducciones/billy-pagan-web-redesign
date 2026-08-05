@@ -43,8 +43,6 @@
     /* IMAGEN DE FONDO GLOBAL */
 
     --fondo: url("../imagenes/inicio/fondo-web-vacio.jpg");
-    /* Versión optimizada para móviles (generar y subir una imagen más pequeña) */
-    --fondo-mobile: url("../imagenes/inicio/fondo-web-vacio-480.jpg");
 
 }
 
@@ -171,22 +169,6 @@ h1{
     color:var(--texto);
 
     text-shadow:var(--sombra-texto);
-
-}
-
-
-a{
-
-    color:inherit;
-
-    text-decoration:none;
-
-}
-
-
-em{
-
-    font-style:italic;
 
 }
 
@@ -435,7 +417,7 @@ em{
 
 .menu-movil{
 
-    display:none;
+    display:flex;
 
     flex-direction:column;
 
@@ -463,6 +445,8 @@ em{
 
     z-index:999;
 
+    visibility:hidden;
+
 
 }
 
@@ -470,6 +454,7 @@ em{
 .menu-movil.abierto{
 
     right:0;
+    visibility:visible;
 
 }
 
@@ -797,6 +782,16 @@ em{
     margin:16px 0 22px;
 }
 
+/* Tarjeta simple de biografía */
+.biografia-card{
+    background:rgba(255,255,255,.95);
+    padding:32px 36px;
+    border-radius:14px;
+    box-shadow:var(--sombra-caja);
+    max-width:820px;
+    margin:0 auto;
+}
+
 /* ======================================================
    15. MUSICA
 ==================================================== */
@@ -917,6 +912,37 @@ em{
     letter-spacing:2px;
     text-transform:uppercase;
     border-radius:6px;
+    margin:4px;
+}
+
+/* Tour date list */
+.tour-ul{
+    list-style:none;
+    padding:0;
+    margin:0 0 20px;
+    text-align:left;
+}
+
+.tour-ul li{
+    padding:8px 0;
+    border-bottom:1px solid rgba(36,36,36,.08);
+    font-size:15px;
+    line-height:1.6;
+    color:var(--texto);
+}
+
+.tour-ul li:last-child{
+    border-bottom:none;
+}
+
+.tour-ul .fecha{
+    color:var(--texto-secundario);
+    font-weight:300;
+}
+
+.tour-ul .ciudad{
+    font-weight:600;
+    letter-spacing:1px;
 }
 
 /* ======================================================
@@ -945,6 +971,19 @@ em{
 .galeria-contenido h2,
 .galeria-contenido p{
     text-align:center;
+}
+
+.galeria-placeholder{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+    font-family:"Montserrat",sans-serif;
+    font-size:13px;
+    font-weight:300;
+    letter-spacing:6px;
+    text-transform:uppercase;
+    color:var(--texto-secundario);
 }
 
 @media (max-width:768px){
@@ -1100,5 +1139,49 @@ em{
     background:transparent;
 
     z-index:150;
+
+}
+
+.barra-inferior p{
+
+    font-size:10px;
+
+    font-weight:300;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    color:var(--texto);
+
+    text-align:center;
+
+}
+
+/* ======================================================
+   23. RESPONSIVE — MENÚ HAMBURGUESA
+==================================================== */
+
+@media (max-width:860px){
+
+    .menu{
+        display:none;
+    }
+
+    .hamburguesa{
+        display:block;
+    }
+
+}
+
+@media (min-width:861px){
+
+    .menu-movil{
+        display:none !important;
+    }
+
+    .hamburguesa{
+        display:none;
+    }
 
 }
