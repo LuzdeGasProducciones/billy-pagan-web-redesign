@@ -1,13 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const tiendaDestino = "/billy-pagan-web-redesign/paginas/tienda.html";
-
-    document.querySelectorAll('a[href*="payhip.com/LuzdeGasRecords"]').forEach((enlace) => {
-        enlace.setAttribute("href", tiendaDestino);
-        enlace.removeAttribute("target");
-        enlace.removeAttribute("rel");
-    });
-
     // Quitar console.log en producción
     // console.log("Billy Pagán · Sitio Oficial");
 
@@ -51,7 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==========================================
-       EFECTO PREMIUM IMAGEN BILLY (respetando prefers-reduced-motion)
+       EFECTO PREMIUM IMAGEN BILLY
+       (respetando prefers-reduced-motion)
     ========================================== */
 
     const hero = document.querySelector(".hero");
@@ -60,9 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!hero || !imagenBilly) return;
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     if (reduceMotion) {
-        imagenBilly.style.transform = 'translateX(-50%) translateY(0) scale(1)';
+
+        imagenBilly.style.transform = "translateX(-50%) translateY(0) scale(1)";
         return;
+
     }
 
     let objetivoX = 0;
@@ -90,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    function animar(){
+    function animar() {
 
         actualX += (objetivoX - actualX) * 0.08;
         actualY += (objetivoY - actualY) * 0.08;
